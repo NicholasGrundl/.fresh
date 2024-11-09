@@ -1,0 +1,13 @@
+# Secrets
+*.env
+.env*
+*.key
+
+
+#filesystem stuffs
+*.DS_Store
+*.vscode
+
+# ignore folders beginning with a '+'
+# - I use these for storing local data, figures, program exports, .etc
++*/

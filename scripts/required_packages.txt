@@ -1,0 +1,6 @@
+build-essential
+google-cloud-sdk
+make
+wget
+curl
+docker.io

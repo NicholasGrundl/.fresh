@@ -1,0 +1,13 @@
+[user]
+	name = Nicholas Grundl
+	email = nicholasgrundl@gmail.com
+[core]
+	editor = nano
+	excludesfile = /home/nicholasgrundl/.gitignore_global
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main

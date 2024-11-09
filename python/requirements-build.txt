@@ -1,0 +1,5 @@
+# pipconf
+twine
+keyrings.google-artifactregistry-auth
+build
+shiv

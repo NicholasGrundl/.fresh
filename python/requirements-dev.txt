@@ -1,0 +1,24 @@
+#jupyter
+jupyterlab
+
+#testing
+pytest
+pytest-cov
+pytest-asyncio
+
+#formatting/linting
+ruff
+mypy
+
+#ai context generation
+repo2txt
+
+# UI mockups
+panel
+ipywidgets
+ipycytoscape
+streamlit
+
+
+#editable
+-e .
