@@ -2,47 +2,81 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# ============================================================================
+# EARLY EXIT FOR NON-INTERACTIVE SHELLS
+# ============================================================================
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
       *) return;;
 esac
 
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
+
+# ============================================================================
+# SHELL BEHAVIOR & HISTORY CONFIGURATION  
+# ============================================================================
+# Don't put duplicate lines or lines starting with space in the history
 HISTCONTROL=ignoreboth
 
-# append to the history file, don't overwrite it
+# Append to the history file, don't overwrite it
 shopt -s histappend
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+# History length settings
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
+# Check the window size after each command and update LINES and COLUMNS
 shopt -s checkwinsize
 
-# If set, the pattern "**" used in a pathname expansion context will
-# match all files and zero or more directories and subdirectories.
+# Enable ** pattern matching (uncomment if needed)
 #shopt -s globstar
 
-# make less more friendly for non-text input files, see lesspipe(1)
+# ============================================================================
+# SYSTEM UTILITIES & LESS CONFIGURATION
+# ============================================================================
+# Make less more friendly for non-text input files
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# set variable identifying the chroot you work in (used in the prompt below)
+# Set variable identifying the chroot you work in
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# set a fancy prompt (non-color, unless we know we "want" color)
+
+# ============================================================================
+# PATH & ENVIRONMENT VARIABLES
+# ============================================================================
+# CUDA Configuration (Dynamic version detection)
+if [ -d "/usr/local/cuda" ]; then
+    export PATH="/usr/local/cuda/bin${PATH:+:${PATH}}"
+    export LD_LIBRARY_PATH="/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"
+    # Fallback to specific version if symlink doesn't exist
+elif [ -d "/usr/local/cuda-12.8" ]; then
+    export PATH="/usr/local/cuda-12.8/bin${PATH:+:${PATH}}"
+    export LD_LIBRARY_PATH="/usr/local/cuda-12.8/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"
+fi
+
+# Bun Runtime
+if [ -d "$HOME/.local/share/reflex/bun" ]; then
+    export BUN_INSTALL="$HOME/.local/share/reflex/bun"
+    export PATH="$BUN_INSTALL/bin:$PATH"
+fi
+
+
+# ============================================================================
+# TERMINAL APPEARANCE & PROMPT (PS1)
+# ============================================================================
+
+# Strategy: Start with Ubuntu foundation, enhance progressively, then Starship override
+
+# Step 1: Ubuntu Foundation - Color Detection & Basic PS1
+# -------------------------------------------------------
+# Set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
 
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
+# Uncomment for a colored prompt (disabled by default)
 #force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
@@ -56,14 +90,14 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+# Default Ubuntu prompt configuration
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
-unset color_prompt force_color_prompt
 
-# If this is an xterm set the title to user@host:dir
+# Set xterm title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
@@ -72,13 +106,48 @@ xterm*|rxvt*)
     ;;
 esac
 
-# enable color support of ls and also add handy aliases
+# Step 2: Git Enhancement - Add git branch if available
+# -----------------------------------------------------
+if command -v git &> /dev/null; then
+    # Helper function for git branch display
+    parse_git_branch() {
+        git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+    }
+    
+    # Enhance PS1 with git branch (only if we have color support)
+    if [ "$color_prompt" = yes ]; then
+        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[90m\]:\[\033[0;33m\]$(parse_git_branch)\[\033[1;37m\]\$ '
+        # Re-add xterm title
+        case "$TERM" in
+        xterm*|rxvt*)
+            PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+            ;;
+        esac
+    fi
+fi
+
+# Step 3: Conda Enhancement - Add conda environment if active
+# -----------------------------------------------------------
+if [ -n "$CONDA_DEFAULT_ENV" ] && [ "$color_prompt" = yes ]; then
+    PS1="\[\033[01;36m\]($(basename "$CONDA_DEFAULT_ENV"))\[\033[90m\]:$PS1"
+fi
+
+unset color_prompt force_color_prompt
+
+# Step 4: Starship Override - Use modern prompt if available
+# ----------------------------------------------------------
+# If starship is available, it completely replaces our progressive PS1
+if command -v starship &> /dev/null; then
+    eval "$(starship init bash)"
+fi
+
+# ============================================================================
+# COLORS & ALIASES
+# ============================================================================
+# Enable color support of ls and add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
@@ -92,22 +161,24 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
+# Alert alias for long running commands
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+# ============================================================================
+# EXTERNAL CONFIGURATIONS
+# ============================================================================
 
+# Load custom aliases if they exist
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
+# Load custom functions if they exist
+if [ -f ~/.bash_custom_functions ]; then
+    . ~/.bash_custom_functions
+fi
+
+# Enable programmable completion features
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
@@ -116,6 +187,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# ============================================================================
+# PACKAGE MANAGERS & RUNTIME INITIALIZATION
+# ============================================================================
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/nicholasgrundl/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -131,28 +205,57 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-#######################################
-#           Added by Nick Grundl      #
-#######################################
 
-# >>> Customizations >>>
-bind '"\t":menu-complete'
-if [ -f ~/.bash_custom_functions ]; then
-    . ~/.bash_custom_functions
+# ============================================================================
+# DEVELOPMENT TOOLS & SHELL ENHANCEMENTS
+# ============================================================================
+
+# Direnv integration for per-directory environment variables
+if command -v direnv &> /dev/null; then
+    eval "$(direnv hook bash)"
 fi
 
-# PS1 Customizations
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[90m\]:'
-PS1+="\[\033[0;33m\]"'$(parse_git_branch)'"\[\033[1;37m\]"'$ '
-PS1="\[\033[01;36m\]"'($(basename "$CONDA_DEFAULT_ENV"))'"\[\033[90m\]:""$PS1"
-
-# SSH Persistence
-set_ssh
+# Enhanced tab completion (cycles through options)
+# Note: This changes default bash behavior - comment out if it causes issues
+bind '"\t":menu-complete'
 
 
-# <<< Customizations <<<
+# ============================================================================
+# CUSTOM PROMPT CONFIGURATION
+# ============================================================================
+# Helper function for git branch display
+# parse_git_branch() {
+#     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+# }
 
+# # Use Starship if available, otherwise fall back to custom PS1
+# if command -v starship &> /dev/null; then
+#     eval "$(starship init bash)"
+# else
+#     # Custom PS1 with conda environment and git branch
+#     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[90m\]:'
+#     PS1+="\[\033[0;33m\]"'$(parse_git_branch)'"\[\033[1;37m\]"'$ '
+#     PS1="\[\033[01;36m\]"'($(basename "$CONDA_DEFAULT_ENV"))'"\[\033[90m\]:""$PS1"
+# fi
+
+
+# ============================================================================
+# SESSION MANAGEMENT
+# ============================================================================
+# SSH persistence (requires set_ssh function to be defined in custom functions)
+if declare -f set_ssh > /dev/null; then
+    set_ssh
+else
+    # Uncomment to see warning about missing function
+    # echo "Warning: set_ssh function not found in custom functions"
+fi
+
+
+# ============================================================================
+# CONTAINER & VIRTUALIZATION
+# ============================================================================
 
 # >>>  Docker settings >>>
 # see (https://dev.to/bowmanjd/install-docker-on-windows-wsl-without-docker-desktop-34m9)
 # <<< Docker Settings <<<
+
