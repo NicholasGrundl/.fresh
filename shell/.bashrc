@@ -1,3 +1,26 @@
+################################################################################
+#                                                                              #
+#    ███╗   ██╗██╗ ██████╗██╗  ██╗ ██████╗ ██╗      █████╗ ███████╗            #
+#    ████╗  ██║██║██╔════╝██║  ██║██╔═══██╗██║     ██╔══██╗██╔════╝            #
+#    ██╔██╗ ██║██║██║     ███████║██║   ██║██║     ███████║███████╗            #
+#    ██║╚██╗██║██║██║     ██╔══██║██║   ██║██║     ██╔══██║╚════██║            #
+#    ██║ ╚████║██║╚██████╗██║  ██║╚██████╔╝███████╗██║  ██║███████║            #
+#    ╚═╝  ╚═══╝╚═╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝╚══════╝            #
+#                                                                              #
+#                                                                              #
+#         ██████╗ ██████╗ ██╗   ██╗███╗   ██╗██████╗ ██╗                       #
+#        ██╔════╝ ██╔══██╗██║   ██║████╗  ██║██╔══██╗██║                       #
+#        ██║  ███╗██████╔╝██║   ██║██╔██╗ ██║██║  ██║██║                       #
+#        ██║   ██║██╔══██╗██║   ██║██║╚██╗██║██║  ██║██║                       #
+#        ╚██████╔╝██║  ██║╚██████╔╝██║ ╚████║██████╔╝███████╗                  #
+#         ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═════╝ ╚══════╝                  #
+#                                                                              #
+#                                                                              #
+#    "Science is more diverse in its terminology than its concepts"            #
+#                              — Amos Ron                                      #
+#                                                                              #
+################################################################################
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -67,11 +90,8 @@ fi
 # TERMINAL APPEARANCE & PROMPT (PS1)
 # ============================================================================
 
-# Strategy: Start with Ubuntu foundation, enhance progressively, then Starship override
-
-# Step 1: Ubuntu Foundation - Color Detection & Basic PS1
-# -------------------------------------------------------
-# Set a fancy prompt (non-color, unless we know we "want" color)
+# Step 1: Color Detection
+# -----------------------
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
@@ -90,56 +110,49 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-# Default Ubuntu prompt configuration
+# Step 2: Build PS1 Progressively
+# --------------------------------
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w'
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w'
 fi
 
-# Set xterm title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
-
-# Step 2: Git Enhancement - Add git branch if available
-# -----------------------------------------------------
+# Add git branch (progressively)
 if command -v git &> /dev/null; then
-    # Helper function for git branch display
     parse_git_branch() {
         git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
     }
     
-    # Enhance PS1 with git branch (only if we have color support)
     if [ "$color_prompt" = yes ]; then
-        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[90m\]:\[\033[0;33m\]$(parse_git_branch)\[\033[1;37m\]\$ '
-        # Re-add xterm title
-        case "$TERM" in
-        xterm*|rxvt*)
-            PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-            ;;
-        esac
+        PS1+='\[\033[90m\]:\[\033[0;33m\]$(parse_git_branch)'
+    else
+        PS1+=':$(parse_git_branch)'
     fi
 fi
 
-# Step 3: Conda Enhancement - Add conda environment if active
-# -----------------------------------------------------------
-if [ -n "$CONDA_DEFAULT_ENV" ] && [ "$color_prompt" = yes ]; then
-    PS1="\[\033[01;36m\]($(basename "$CONDA_DEFAULT_ENV"))\[\033[90m\]:$PS1"
+# Add final prompt character
+if [ "$color_prompt" = yes ]; then
+    PS1+='\[\033[1;37m\]\$ '
+else
+    PS1+='\$ '
 fi
+
+# Set xterm title (only once, at the end)
+case "$TERM" in
+xterm*|rxvt*)
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
+esac
 
 unset color_prompt force_color_prompt
 
-# Step 4: Starship Override - Use modern prompt if available
-# ----------------------------------------------------------
-# If starship is available, it completely replaces our progressive PS1
+# Step 3: Starship Override
+# -------------------------
 if command -v starship &> /dev/null; then
     eval "$(starship init bash)"
 fi
+
 
 # ============================================================================
 # COLORS & ALIASES
@@ -205,6 +218,15 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Add a conda prompt prefix
+if command -v conda &> /dev/null; then
+    PS1="\[\033[01;36m\]"'($(basename "$CONDA_DEFAULT_ENV"))'"\[\033[90m\]:""$PS1"
+fi
+
+# >>>  Docker settings >>>
+# see (https://dev.to/bowmanjd/install-docker-on-windows-wsl-without-docker-desktop-34m9)
+# <<< Docker Settings <<<
+
 
 # ============================================================================
 # DEVELOPMENT TOOLS & SHELL ENHANCEMENTS
@@ -221,25 +243,6 @@ bind '"\t":menu-complete'
 
 
 # ============================================================================
-# CUSTOM PROMPT CONFIGURATION
-# ============================================================================
-# Helper function for git branch display
-# parse_git_branch() {
-#     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-# }
-
-# # Use Starship if available, otherwise fall back to custom PS1
-# if command -v starship &> /dev/null; then
-#     eval "$(starship init bash)"
-# else
-#     # Custom PS1 with conda environment and git branch
-#     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[90m\]:'
-#     PS1+="\[\033[0;33m\]"'$(parse_git_branch)'"\[\033[1;37m\]"'$ '
-#     PS1="\[\033[01;36m\]"'($(basename "$CONDA_DEFAULT_ENV"))'"\[\033[90m\]:""$PS1"
-# fi
-
-
-# ============================================================================
 # SESSION MANAGEMENT
 # ============================================================================
 # SSH persistence (requires set_ssh function to be defined in custom functions)
@@ -247,15 +250,5 @@ if declare -f set_ssh > /dev/null; then
     set_ssh
 else
     # Uncomment to see warning about missing function
-    # echo "Warning: set_ssh function not found in custom functions"
+    echo "Warning: set_ssh function not found in custom functions"
 fi
-
-
-# ============================================================================
-# CONTAINER & VIRTUALIZATION
-# ============================================================================
-
-# >>>  Docker settings >>>
-# see (https://dev.to/bowmanjd/install-docker-on-windows-wsl-without-docker-desktop-34m9)
-# <<< Docker Settings <<<
-

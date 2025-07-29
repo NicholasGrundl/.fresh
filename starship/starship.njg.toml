@@ -59,7 +59,7 @@ truncation_length = 20
 
 # Git status - minimal, only show if there are changes
 [git_status]
-format = "[\\($all_status\\)]($style)"
+format = "[(\\($all_status\\))]($style)"
 style = "italic #B8841A"
 disabled = false
 ahead = "↑${count}"
@@ -77,10 +77,9 @@ stashed = "~${count}"
 
 # Prompt character - matches your $ style
 [character]
-success_symbol = "[\\$](bold #B5B5B5)"
-error_symbol = "[\\$](bold #910000)"
-vicmd_symbol = "[\\$](bold #B5B5B5)"
-
+success_symbol = "[\\$](bold #B8B8B8)"
+error_symbol = "[\\$](bold #916060)"
+vicmd_symbol = "[◀](bold #D41179)"
 
 
 # Disable everything else to keep it clean
