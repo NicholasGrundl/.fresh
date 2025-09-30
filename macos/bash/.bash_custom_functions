@@ -1,0 +1,115 @@
+########################################
+####      General Utilities           ##
+########################################
+
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+
+########################################
+####   Environment Management         ##
+########################################
+
+set_environment(){
+    # Set environment variables from a .env file
+    # Usage: set_environment /path/to/.env
+    if [ $# -eq 1 ]; then
+        env_file_path=$1
+        echo "Setting Environment Variables:"
+        while IFS= read -r line || [[ -n "$line" ]]; do
+            # Skip comments and empty lines
+            if [[ ! "$line" =~ ^\# && -n "$line" ]]; then
+                key=$(echo "$line" | cut -d'=' -f1)
+                value=$(echo "$line" | cut -d'=' -f2-)
+                # Expand any variables in the value
+                expanded_value=$(eval echo "$value")
+                export "$key=$expanded_value"
+                echo "$key"
+            fi
+        done < "$env_file_path"
+    else
+        echo "Bad input args. Please specify a SINGLE path to a .env file"
+        return 1
+    fi
+    echo ""
+}
+
+
+unset_environment(){
+    # Unset environment variables from a .env file
+    # Usage: unset_environment /path/to/.env
+    if [ $# -eq 1 ]; then
+        env_file_path=$1
+        echo "Unsetting Environment Variables:"
+        unset $(grep -v '^#' ${env_file_path} | awk 'BEGIN { FS = "=" } ; { print $1 }')
+        echo "$(grep -v '^#' ${env_file_path}| awk 'BEGIN { FS = "=" } ; { print $1 }')"
+    else
+        echo "Bad input args. Please specify a SINGLE path to a .env file"
+        return 1
+    fi
+}
+
+
+########################################
+####       SSH Management             ##
+########################################
+
+set_ssh(){
+    # Set up persistent SSH agent for key management
+    # Keys will persist for 1 day by default
+
+    echo "Checking for existing SSH Agent..."
+    # The socket used for ssh persistence
+    SSH_AUTH_SOCK="$HOME/.ssh/ssh-agent.sock"
+
+    # Check if ssh-agent exists (macOS compatible)
+    if pgrep -x "ssh-agent" > /dev/null; then
+        echo "- Found existing SSH Agent."
+        SSH_AGENT_PID="$(pgrep -x ssh-agent | head -n1)"
+    else
+        echo "- Cannot find an SSH Agent. Starting one now."
+        if [ -S $SSH_AUTH_SOCK ]; then
+            echo "- Removing stale SSH Socket"
+            rm "$SSH_AUTH_SOCK"
+        fi
+        eval "$(ssh-agent -s -a "$SSH_AUTH_SOCK")"
+    fi
+
+    # Set ENV vars for persistence
+    export SSH_AGENT_PID
+    export SSH_AUTH_SOCK
+
+    # Check for existing keys
+    echo "Checking for existing SSH keys..."
+    # agent_run_state: 0=agent running w/ key; 1=agent w/o key; 2=agent not running
+    agent_run_state=$(ssh-add -l >| /dev/null 2>&1; echo $?)
+    if [ $agent_run_state -eq 1 ]; then
+        # No keys exist
+        echo "- No keys found. Adding SSH keys now"
+        ssh-add -t 1d
+    elif [ $agent_run_state -eq 0 ]; then
+        # Keys exist
+        echo "- Found existing SSH keys."
+    fi
+    echo "SSH Credentials are ready to go."
+}
+
+
+unset_ssh() {
+    # Clean up SSH agent and sockets
+
+    if [ -f "$SSH_AUTH_SOCK" ]; then
+        rm "$SSH_AUTH_SOCK"
+    fi
+
+    # Sometimes this is needed for a true reset
+    DEFAULT_SOCK_FILE=~/.ssh/ssh-agent.sock
+    if [ -f $DEFAULT_SOCK_FILE ]; then
+        rm "$DEFAULT_SOCK_FILE"
+    fi
+
+    # Kill all ssh-agents including orphans
+    # Resets ssh state for bash setup to a known state
+    killall ssh-agent 2>/dev/null
+}
