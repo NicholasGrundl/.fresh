@@ -36,7 +36,7 @@ Complete bash shell configuration for macOS systems, including custom prompt, fu
 - Homebrew (Apple Silicon and Intel support)
 - Direnv (per-directory environment variables)
 - NVM (Node Version Manager)
-- Conda/Miniconda (placeholder for initialization)
+- Conda/Miniconda (manual activation - see [../miniconda/README.md](../miniconda/README.md))
 - Starship prompt (if installed)
 
 ## Installation

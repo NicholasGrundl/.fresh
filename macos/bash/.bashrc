@@ -209,24 +209,25 @@ fi
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 # This section will be auto-populated when you install conda/miniconda
-# __conda_setup="$('/Users/yourusername/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "/Users/yourusername/miniconda3/etc/profile.d/conda.sh" ]; then
-#         . "/Users/yourusername/miniconda3/etc/profile.d/conda.sh"
-#     else
-#         export PATH="/Users/yourusername/miniconda3/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
+__conda_setup="$('/Users/yourusername/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/yourusername/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/yourusername/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/yourusername/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
 # <<< conda initialize <<<
 
 # # Add a conda prompt prefix
-# if command -v conda &> /dev/null; then
-#     PS1="\[\033[01;36m\]"'($(basename "$CONDA_DEFAULT_ENV"))'"\[\033[90m\]:""$PS1"
-# fi
+if command -v conda &> /dev/null; then
+    PS1="\[\033[01;36m\]"'($(basename "$CONDA_DEFAULT_ENV"))'"\[\033[90m\]:""$PS1"
+fi
 
+# >>> NVM initialize >>>
 # NVM (Node Version Manager) initialization
 export NVM_DIR="$HOME/.nvm"
 if [ -s "$NVM_DIR/nvm.sh" ]; then

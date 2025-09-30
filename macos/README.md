@@ -11,6 +11,7 @@ Complete guide for setting up a modern development environment on macOS using th
   - [Starship Prompt](#starship-prompt)
   - [UV (Python)](#uv-python)
   - [NVM (Node.js)](#nvm-nodejs)
+  - [Miniconda (Python)](#miniconda-python)
   - [VSCode](#vscode)
 - [Setup Checklist](#setup-checklist)
 - [Platform Notes](#platform-notes)
@@ -212,6 +213,52 @@ nvm use
 
 ---
 
+### Miniconda (Python)
+
+Lightweight Python distribution and environment manager for general exploration and interactive work.
+
+**Location**: `miniconda/`
+
+**What's included**:
+- README with installation and setup guide
+- Base environment package recommendations
+- UV vs Conda usage philosophy
+
+**Key features**:
+- System-wide base environment for exploration
+- Perfect for Jupyter notebooks and data analysis
+- Access to conda and pip packages
+- Manually activated (not auto-loaded on shell start)
+- Complementary to UV (not competing)
+
+**Philosophy**:
+- **Miniconda**: For exploration, notebooks, interactive work
+- **UV**: For project-specific dependencies and production code
+- **Both**: Can use `uv pip install` inside conda environments for speed
+
+**Quick start**:
+```bash
+# Install from official site (see miniconda/README.md)
+# https://docs.conda.io/en/latest/miniconda.html
+
+# Initialize conda
+~/miniconda3/bin/conda init bash
+
+# Activate when needed
+conda activate base
+
+# Install base packages
+conda install pandas numpy scipy matplotlib seaborn jupyterlab requests
+pip install openai anthropic google-generativeai
+
+# Deactivate when done
+conda deactivate
+```
+
+**See**: [miniconda/README.md](miniconda/README.md) for detailed setup and usage patterns.
+
+---
+
 ### VSCode
 
 **Location**: `vscode/`
@@ -258,6 +305,9 @@ Use this checklist to track your setup progress:
 - [ ] Test prompt shows git branch and tool versions
 
 ### Optional Tools
+- [ ] Install Miniconda (see [miniconda/README.md](miniconda/README.md))
+  - [ ] Set up base environment with data science packages
+  - [ ] Configure manual activation (not auto-load)
 - [ ] Install VSCode (`brew install --cask visual-studio-code`)
 - [ ] Install Docker Desktop (`brew install --cask docker`)
 - [ ] Install GNU utilities (`brew install coreutils findutils gnu-sed`)
