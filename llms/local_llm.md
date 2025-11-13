@@ -220,6 +220,8 @@ sudo apt-get install -y nodejs
 
 ### Installing Ollama
 
+https://github.com/ollama/ollama/blob/main/docs/linux.md
+
 **Method 1: Automatic Install (Recommended)**
 ```bash
 # Download and run install script
