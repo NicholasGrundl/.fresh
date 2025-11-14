@@ -9,6 +9,7 @@ A comprehensive toolkit for setting up new development environments across Linux
 - [Repository Structure](#repository-structure)
 - [Components](#components)
   - [Conda Environment Template](#conda-environment-template)
+  - [NVM + UV Development Environment](#nvm--uv-development-environment)
   - [Python Project Templates](#python-project-templates)
   - [Editor Configurations](#editor-configurations)
   - [Setup Scripts (Linux/Ubuntu)](#setup-scripts-linuxubuntu)
@@ -142,6 +143,12 @@ Get-Content .\README.md
 .fresh/
 ├── conda/                  # Conda environment templates
 │   └── base_template.yml  # Base environment with essential tools
+├── nvm-uv/                 # NVM + UV development environment
+│   ├── .envrc              # direnv auto-activation config
+│   ├── .nvmrc              # Node.js version specification
+│   ├── .env.example        # Environment variables template
+│   ├── .gitignore          # Python + Node.js ignore patterns
+│   └── DEVELOPMENT.md      # Cross-platform setup guide
 ├── editors/                # Editor configurations
 │   ├── jupyter_lab_config.py    # JupyterLab settings
 │   └── settings.json            # VS Code configuration
@@ -203,6 +210,53 @@ conda env export > my_environment.yml
 - Uses conda-forge as primary channel for latest packages
 - Includes bioconda for bioinformatics tools
 - Pre-configured with modern alternatives (bat > cat, fd > find, ripgrep > grep)
+
+### NVM + UV Development Environment
+
+**Location:** `nvm-uv/`
+
+A modern alternative to conda-based environments using nvm (Node Version Manager) and uv (ultra-fast Python package installer). Perfect for Python + Node.js projects that need automatic environment switching.
+
+**Key Features:**
+- **Automatic activation:** direnv handles environment switching when you `cd` into projects
+- **Node.js version management:** nvm with `.nvmrc` for consistent Node versions across team
+- **Fast Python packaging:** uv for lightning-fast dependency resolution and installation
+- **Environment isolation:** Python virtual environments + Node version pinning
+- **Cross-platform:** Works on Linux, macOS, and Windows (via WSL2)
+
+**Template Files:**
+- `.envrc` - direnv configuration for auto-activation
+- `.nvmrc` - Node.js version specification
+- `.env.example` - Environment variables template
+- `.gitignore` - Comprehensive ignore patterns for Python + Node projects
+- `DEVELOPMENT.md` - Platform-specific setup guide
+
+**Usage:**
+```bash
+# Copy templates to your project
+cp ~/.fresh/nvm-uv/.envrc ./
+cp ~/.fresh/nvm-uv/.nvmrc ./
+cp ~/.fresh/nvm-uv/.env.example ./
+cp ~/.fresh/nvm-uv/.gitignore ./
+
+# Set up environments
+uv venv                    # Create Python virtual environment
+nvm install               # Install Node version from .nvmrc
+cp .env.example .env      # Configure environment variables
+
+# Allow direnv (first time only)
+direnv allow
+
+# Now cd into directory auto-activates everything!
+```
+
+**When to Use:**
+- Python + Node.js full-stack projects
+- Projects requiring specific Node.js versions
+- Teams wanting fast Python dependency management
+- Developers preferring lightweight, tool-specific solutions over conda
+
+**Setup Guide:** See `nvm-uv/DEVELOPMENT.md` for complete installation instructions across platforms.
 
 ### Python Project Templates
 
@@ -594,3 +648,40 @@ dependencies:
 - [ ] Add CI/CD pipeline examples
 - [ ] Create automated testing for setup scripts
 - [ ] Add support for additional shells (fish, nushell)
+
+
+
+
+
+# Misc
+
+## MICRO commit filtering
+
+Look at micro commits only
+```bash
+git log --grep="MICRO" --format="%h %ad %s" --date=short -30
+```
+
+Look at micro commits with file changes
+```bash
+git log --grep="MICRO" --stat --oneline --format="%h %ad %s" --date=short -10
+```
+
+Look at Micro commits with sequential file changes only
+```bash
+git -c color.ui=always log --grep="MICRO" --stat --format="%h %ad" --date=short -10 | awk '/^[a-f0-9]/ {if(NR>1)
+   print ""; print $0} /^\s+\S+.*\|/ {print "  " $0} /^$/ {next} /files? changed/ {next}'
+```
+
+## MACRO commit filtering
+
+Look at macro commits subject only
+```bash
+git -c color.ui=always log --grep="MICRO" --invert-grep --format="%h %ad %s" --date=short -30
+```
+
+Look at macro commits full message
+```bash
+git -c color.ui=always log --grep="MICRO" --invert-grep --format="%h %ad %s%n%n%b%n---" --date=short -10
+```
+
