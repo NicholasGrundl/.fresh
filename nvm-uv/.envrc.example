@@ -8,5 +8,4 @@ source .venv/bin/activate
 dotenv
 
 # Set shared defaults (can be overridden by .env)
-export NODE_ENV=${NODE_ENV:-development}
-export PYTHONUNBUFFERED=1
+# export PYTHONPATH="$PWD/src:$PYTHONPATH"

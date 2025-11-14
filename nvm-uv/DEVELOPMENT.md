@@ -1,30 +1,19 @@
 # Development Setup Guide
 
-This guide covers setting up your development environment for this Python + Node.js project.
+This guide covers setting up your PC for Python + Node.js development.
 
 ## Prerequisites by Operating System
 
 ### Windows (PowerShell or Command Prompt)
 
-#### 1. Install WSL2 (Recommended)
+#### Native Windows Setup
+
+**Install UV:**
+
+see https://docs.astral.sh/uv/getting-started/installation/#installation-methods
+
 ```powershell
-wsl --install
-```
-Then follow the **Linux (Ubuntu/WSL2)** section below.
-
-#### 2. Alternative: Native Windows Setup
-
-**Install Python:**
-- Download from [python.org](https://www.python.org/downloads/)
-- Check "Add Python to PATH" during installation
-
-**Install Node.js:**
-- Download from [nodejs.org](https://nodejs.org/)
-- This includes npm
-
-**Install uv:**
-```powershell
-powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
 **Install nvm-windows:**
@@ -37,12 +26,14 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 
 ### Linux (Ubuntu/WSL2)
 
-#### 1. Update System Packages
+#### 1. System Packages
+
+Update and install any OS level packages
+
 ```bash
 sudo apt update && sudo apt upgrade -y
-```
 
-#### 2. Install Build Dependencies
+**Build Dependencies**
 ```bash
 sudo apt install -y \
   build-essential \
@@ -55,62 +46,84 @@ sudo apt install -y \
   zlib1g-dev
 ```
 
-#### 3. Install uv
+#### 2. Install uv
+
+Install UV at the global OS level to manage python packages
+
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
 Add to PATH (if not automatically added):
-```bash
-echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
-source ~/.bashrc
-```
+- For `.bashrc` add: `export PATH="$HOME/.local/bin:$PATH`
+- Often `~/.local/bin` is already sourced so this may be unecessary
 
 Verify installation:
 ```bash
 uv --version
 ```
 
-#### 4. Install nvm
+#### 3. Install nvm
+
+Install NVM at the OS level to manage all node dependencies
+
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 ```
 
-Reload your shell:
-```bash
-source ~/.bashrc
-```
-
 Verify installation:
 ```bash
+source ~/.bashrc
 nvm --version
 ```
 
-#### 5. Install direnv
+#### 4. Install direnv
+
+We will use `direnv` to manage env vars as well as auto sourcing our python and node envs per project
+
 ```bash
 sudo apt install direnv
 ```
 
 Add to your shell (add to `~/.bashrc`):
-```bash
-eval "$(direnv hook bash)"
-```
+- `eval "$(direnv hook bash)`
 
-Reload your shell:
+Verify installation:
 ```bash
 source ~/.bashrc
+direnv --version
+```
+
+#### 5. Install Just
+
+We will use Just to manage all project level commands and aliased scripts
+- https://github.com/casey/just
+
+```bash
+sudo apt install just
+```
+
+Alternatively we can install the binaries (similiar to UV)
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to ~/.local/bin
 ```
 
 Verify installation:
 ```bash
-direnv --version
+source ~/.bashrc
+just --help
 ```
+
+
 
 ---
 
-### macOS (Bash or Zsh)
+### macOS (Bash)
 
 #### 1. Install Homebrew (if not installed)
+
+We will manage our packages with brew
+
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
@@ -121,15 +134,15 @@ xcode-select --install
 ```
 
 #### 3. Install uv
+Install UV at the global OS level to manage python packages
+
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
 Add to PATH (if not automatically added):
-```bash
-echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc  # or ~/.bash_profile
-source ~/.zshrc  # or source ~/.bash_profile
-```
+- For `.bashrc` add: `export PATH="$HOME/.local/bin:$PATH`
+- Often `~/.local/bin` is already sourced so this may be unecessary
 
 Verify installation:
 ```bash
@@ -137,39 +150,54 @@ uv --version
 ```
 
 #### 4. Install nvm
+
+Install NVM at the OS level to manage all node dependencies
+
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 ```
 
-Reload your shell:
-```bash
-source ~/.zshrc  # or source ~/.bash_profile
-```
-
 Verify installation:
 ```bash
+source ~/.bashrc
 nvm --version
 ```
 
 #### 5. Install direnv
+
+We will use `direnv` to manage env vars as well as auto sourcing our python and node envs per project
+
 ```bash
 brew install direnv
 ```
 
-Add to your shell config (`~/.zshrc` or `~/.bash_profile`):
+Add to your shell (add to `~/.bashrc`):
+- `eval "$(direnv hook bash)`
+
+Verify installation:
 ```bash
-eval "$(direnv hook bash)"  # or "$(direnv hook zsh)" for zsh
+source ~/.bashrc
+direnv --version
 ```
 
-Reload your shell:
+
+#### 5. Install Just
+
+We will use Just to manage all project level commands and aliased scripts
+- https://github.com/casey/just
+
+
+Alternatively we can install the binaries (similiar to UV)
 ```bash
-source ~/.zshrc  # or source ~/.bash_profile
+curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to ~/.local/bin
 ```
 
 Verify installation:
 ```bash
-direnv --version
+source ~/.bashrc
+just --help
 ```
+
 
 ---
 
@@ -182,30 +210,48 @@ cd <project-directory>
 ```
 
 ### 2. Set up Python environment
+
+Create a new project
 ```bash
 # Create virtual environment
-uv venv
+uv init
 
-# Activate it (or let direnv do this automatically)
-source .venv/bin/activate
+# Add or remove packages
+uv add [package]
+uv remove [package]
 
-# Install Python dependencies
-uv pip install -r requirements.txt
+# sync environment apckages with pyproject.toml
+uv sync
 ```
 
 ### 3. Set up Node environment
+
+Create a `.nvmrc` file with the node version
+```bash
+echo "20" > .nvmrc
+
+# or copy the file
+cp .nvmrc.example .nvmrc
+```
+
 ```bash
 # Install the Node version specified in .nvmrc
 nvm install
-
-# Use the correct Node version (or let direnv do this automatically)
-nvm use
 
 # Install Node dependencies
 npm install
 ```
 
 ### 4. Configure environment variables
+
+Copy the `.envrc` to auto activate node and python venv
+
+```bash
+cp .envrc.example .envrc
+```
+
+Copy the evn file and update the env vars as desired
+
 ```bash
 # Copy the example environment file
 cp .env.example .env
@@ -214,7 +260,11 @@ cp .env.example .env
 nano .env  # or use your preferred editor
 ```
 
+
 ### 5. Allow direnv (first time only)
+
+Enable direnv on the project so it auto activates and has the env vars
+
 ```bash
 direnv allow
 ```
@@ -224,75 +274,80 @@ Now whenever you `cd` into this directory:
 - Node version switches automatically
 - Environment variables load automatically
 
----
 
-## Verification
+## Ad Hoc Development
 
-### Check Python setup:
+For adhock development and exploratory work we use the following approaches:
+- miniconda envs with python packages installed (existing approach, heavier weight)
+- uv tools (globally available packages) to run marimo notebooks
+
+### UV Tools
+
+Install marimo as a uv tool
 ```bash
-python --version
-which python  # Should point to .venv/bin/python
+uv tool install marimo
 ```
 
-### Check Node setup:
-```bash
-node --version
-npm --version
-```
-
-### Check environment variables:
-```bash
-echo $DATABASE_URL  # Should show your configured value
-```
-
----
-
-## Daily Development Workflow
+Create a custom bash function to generate a new marimo tempalted notebook
 
 ```bash
-# Navigate to project
-cd <project-directory>
+explore() {
+    # Check if marimo is installed
+    if ! command -v marimo &> /dev/null; then
+        echo "marimo is not installed."
+        echo "Install it with: uv tool install marimo"
+        return 1
+    fi
+    
+    # Determine filename with increment if needed
+    local base_filename="${1:-explore}"
+    local filename="${base_filename}.py"
+    local counter=1
+    
+    while [ -f "$filename" ]; do
+        filename="${base_filename}_${counter}.py"
+        ((counter++))
+    done
+    
+    # Create the templated marimo notebook
+    cat > "$filename" << 'EOF'
+# /// script
+# dependencies = [
+#   "pandas",
+#   "matplotlib",
+#   "numpy",
+# ]
+# ///
 
-# direnv automatically activates everything
+import marimo
 
-# Start development
-npm run dev          # or whatever your start command is
-python main.py       # or whatever your Python entry point is
+__generated_with = "0.9.14"
+app = marimo.App()
+
+
+@app.cell
+def __():
+    import marimo as mo
+    import pandas as pd
+    import matplotlib.pyplot as plt
+    import numpy as np
+    return mo, np, pd, plt
+
+@app.cell
+def __():
+    # Your code here
+    return
+
+
+if __name__ == "__main__":
+    app.run()
+EOF
+    
+    echo "Created $filename"
+    echo "Run with: marimo edit $filename"
+}
 ```
 
----
-
-## Troubleshooting
-
-### direnv not activating
-```bash
-# Make sure it's hooked into your shell
-direnv hook bash  # Should output eval code
-
-# Re-allow the directory
-direnv allow
-```
-
-### Python virtual environment not found
-```bash
-# Recreate it
-uv venv
-source .venv/bin/activate
-uv pip install -r requirements.txt
-```
-
-### Node version mismatch
-```bash
-# Reinstall the correct version
-nvm install
-nvm use
-```
-
-### Environment variables not loading
-```bash
-# Make sure .env file exists
-ls -la .env
-
-# Check .envrc has dotenv line
-cat .envrc | grep dotenv
-```
+Then from any location we can run the following:
+- `explore [optional notebookname]` will create a new blank notebook
+- `marimo edit [notebook name]` will run the notebook and install any inline dependencies
