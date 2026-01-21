@@ -1,0 +1,16 @@
+Movement Log - Wed Jan 21 11:18:58 PST 2026
+COPIED: shell/* -> linux/bash/
+COPIED: scripts/* -> linux/scripts/
+ARCHIVED: shell -> +archive/shell
+ARCHIVED: scripts -> +archive/scripts
+COPIED: git -> tools/git
+COPIED: conda -> tools/conda
+COPIED: editors -> tools/editors
+COPIED: starship -> tools/starship
+ARCHIVED: git, conda, editors, starship -> +archive/
+COPIED: python -> templates/python
+COPIED: nvm-uv -> templates/nvm-uv
+ARCHIVED: python, nvm-uv -> +archive/
+COPIED: llms/* -> ai/docs/
+ARCHIVED: llms -> +archive/llms
+ARCHIVED: actions.md -> +archive/actions_reorg_completed.md
