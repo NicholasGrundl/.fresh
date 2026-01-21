@@ -12,6 +12,7 @@ A comprehensive toolkit for setting up new development environments across Linux
   - [NVM + UV Development Environment](#nvm--uv-development-environment)
   - [Python Project Templates](#python-project-templates)
   - [Editor Configurations](#editor-configurations)
+  - [AI Development: Ollama + OpenCode](#ai-development-ollama--opencode)
   - [Setup Scripts (Linux/Ubuntu)](#setup-scripts-linuxubuntu)
   - [Starship Prompt](#starship-prompt)
   - [Windows PowerShell Environment](#windows-powershell-environment)
@@ -152,6 +153,10 @@ Get-Content .\README.md
 ├── editors/                # Editor configurations
 │   ├── jupyter_lab_config.py    # JupyterLab settings
 │   └── settings.json            # VS Code configuration
+├── ai/                     # AI development setup
+│   └── ollama-opencode/          # Ollama + OpenCode configuration
+│       ├── opencode.json        # OpenCode config for local models
+│       └── README.md            # Complete setup guide
 ├── python/                 # Python project templates
 │   ├── Makefile           # Common development tasks
 │   ├── pyproject.toml     # Modern Python packaging config
@@ -330,6 +335,212 @@ Custom JupyterLab configuration for optimal notebook experience.
 # Copy to Jupyter config directory
 mkdir -p ~/.jupyter
 cp editors/jupyter_lab_config.py ~/.jupyter/
+```
+
+### AI Development: Ollama + OpenCode
+
+**Location:** `ai/ollama-opencode/`
+
+Complete setup for local AI development using Ollama (local model server) and OpenCode (AI coding assistant). This enables you to run powerful coding models locally without relying on cloud services.
+
+#### Key Features:
+- **Local AI Models:** Run coding models like Qwen2.5-Coder on your own hardware
+- **Privacy-First:** No code sent to external services
+- **Cost-Effective:** No API fees after initial setup
+- **GPU Acceleration:** Automatic CUDA GPU detection and usage
+- **OpenCode Integration:** Seamless AI coding assistant experience
+
+#### Prerequisites:
+- **GPU:** NVIDIA GPU with CUDA support (recommended) or CPU-only mode
+- **RAM:** 16GB+ recommended for 7B models, 32GB+ for 14B models
+- **Storage:** 10GB+ per model downloaded
+
+#### Setup Instructions:
+
+**Step 1: Install Ollama**
+```bash
+# Install Ollama
+curl -fsSL https://ollama.ai/install.sh | sh
+
+# Verify installation
+ollama --version
+```
+
+**Step 2: Start Ollama Server**
+```bash
+# Start the Ollama server (keep this running)
+ollama serve
+```
+
+**Step 3: Download a Coding Model**
+In a **new terminal**:
+```bash
+# Download a coding model (start with 7B for testing)
+ollama pull qwen2.5-coder:7b
+
+# Or download the larger 14B model (more capable)
+ollama pull qwen2.5-coder:14b
+
+# List available models
+ollama list
+```
+
+**Step 4: Install OpenCode**
+```bash
+# Install OpenCode
+curl -fsSL https://opencode.ai/install | bash
+
+# Or using npm
+npm install -g opencode-ai
+```
+
+**Step 5: Configure OpenCode for Ollama**
+
+Create an `opencode.json` file in your project directory:
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama (local)",
+      "options": {
+        "baseURL": "http://localhost:11434/v1"
+      },
+      "models": {
+        "qwen2.5-coder:7b": {
+          "name": "Qwen2.5 Coder 7B (local)"
+        },
+        "qwen2.5-coder:14b": {
+          "name": "Qwen2.5 Coder 14B (local)"
+        }
+      }
+    }
+  }
+}
+```
+
+**Step 6: Test and Use**
+```bash
+# Test Ollama is working
+curl http://localhost:11434/api/tags
+
+# Start OpenCode in your project directory
+cd /path/to/your/project
+opencode
+
+# In OpenCode, run:
+/models
+# Select your Ollama model from the list
+```
+
+#### Usage Examples:
+
+**Basic AI Coding Assistance:**
+```bash
+# Start OpenCode
+opencode
+
+# Ask questions about your codebase
+"How does authentication work in @src/auth.py?"
+
+# Request new features
+"Add a user deletion feature with soft delete and recovery screen"
+
+# Get code explanations
+"Explain what this function does in @utils/helpers.py"
+```
+
+**Model Management:**
+```bash
+# Download additional models
+ollama pull codellama:7b
+ollama pull deepseek-coder:6.7b
+
+# Remove unused models
+ollama rm qwen2.5-coder:7b
+
+# Check model status
+ollama ps
+```
+
+#### Performance Tips:
+
+**GPU Optimization:**
+- Ollama automatically detects and uses NVIDIA GPUs
+- For larger models, ensure you have sufficient VRAM
+- Monitor GPU usage with `nvidia-smi`
+
+**Memory Management:**
+- Use smaller models (7B) on systems with <32GB RAM
+- Close other applications when running large models
+- Restart Ollama if you encounter memory issues
+
+**Model Selection:**
+- **7B Models:** Fast, good for simple tasks, ~8GB RAM
+- **14B Models:** More capable, better for complex code, ~16GB RAM
+- **33B+ Models:** Most capable, require 32GB+ RAM and powerful GPU
+
+#### Troubleshooting:
+
+**Common Issues:**
+
+1. **"Unable to connect" error:**
+   ```bash
+   # Check if Ollama is running
+   curl http://localhost:11434/api/tags
+   
+   # Restart Ollama if needed
+   pkill ollama && ollama serve
+   ```
+
+2. **Model download stuck:**
+   ```bash
+   # Cancel and retry
+   Ctrl+C
+   ollama pull qwen2.5-coder:7b
+   ```
+
+3. **Out of memory errors:**
+   ```bash
+   # Use smaller model
+   ollama pull qwen2.5-coder:1.5b
+   
+   # Or check system resources
+   free -h
+   nvidia-smi
+   ```
+
+4. **OpenCode can't find models:**
+   - Verify `opencode.json` is in your project directory
+   - Check that Ollama server is running
+   - Ensure model names match exactly
+
+**Configuration Files:**
+- **Ollama Config:** `~/.ollama/config`
+- **OpenCode Config:** `./opencode.json` (project-specific)
+- **Models Location:** `~/.ollama/models/`
+
+#### Alternative Setup Methods:
+
+**Using OpenCode Connect Command:**
+```bash
+opencode
+# Run: /connect
+# Select "Other"
+# Enter provider ID: "ollama"
+# Enter API key: "sk-dummy" (any key works for local)
+# Then create opencode.json as shown above
+```
+
+**Docker Ollama (Alternative):**
+```bash
+# Run Ollama in Docker
+docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+
+# Pull models
+docker exec -it ollama ollama pull qwen2.5-coder:7b
 ```
 
 ### Setup Scripts (Linux/Ubuntu)
