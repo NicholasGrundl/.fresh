@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:sabe.io)",
+      "WebFetch(domain:geshan.com.np)",
+      "Bash(git add:*)",
+      "SlashCommand(/commit-manual)"
+    ],
+    "deny": [],
+    "ask": []
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/micro-commit.sh",
+            "timeout": 10
+          }
+        ]
+      },
+      {
+        "matcher": "Bash(mv .*)|Bash(cp .*)|Bash(mkdir .*)|Bash(sed -i.*)|Bash(.*>.*)|Bash(npm (install|add|remove|update).*)|Bash(yarn (add|remove).*)|Bash(pnpm (add|remove).*)|Bash(npx create.*)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/micro-commit.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
