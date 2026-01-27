@@ -7,7 +7,9 @@
       "Bash(git diff:*)",
       "Bash(ls:*)",
       "Bash(find:*)",
-      "SlashCommand(/commit-manual)"
+      "SlashCommand(/commit-manual)",
+      "Bash(git -C /Users/nicholasgrundl/projects/.fresh log --format=\"%ai\" --diff-filter=A -- \"library/ai/claudecode/bizwiz\")",
+      "Bash(git -C /Users/nicholasgrundl/projects/.fresh log --format=\"%ai\" --diff-filter=A -- \"library/ai/claudecode/bookend\")"
     ],
     "deny": [],
     "ask": []
