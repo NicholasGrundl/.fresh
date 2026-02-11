@@ -56,7 +56,7 @@ function Set-SSHEnvironment {
 
     foreach ($keyType in $sshKeyTypes) {
         $keyPath = "$env:USERPROFILE\.ssh\$keyType"
-    
+
         if (Test-Path $keyPath) {
             Write-Host "Adding $keyType SSH key to the agent..."
             $addKeyOutput = ssh-add $keyPath 2>&1
@@ -77,7 +77,7 @@ function Set-SSHEnvironment {
 
     Write-Host "SSH_AUTH_SOCK: $env:SSH_AUTH_SOCK"
     Write-Host "SSH_AGENT_PID: $env:SSH_AGENT_PID"
-	
+
 	Write-Host "==== SSH setup complete ===="
     Write-Host "You can now run Reset-SSHEnvironment to clear all SSH setup"
 }
@@ -126,4 +126,42 @@ function Reset-SSHEnvironment {
 
     Write-Host "==== SSH Environment Reset Complete ===="
     Write-Host "You can now run Set-SSHEnvironment to set up a fresh SSH environment."
+}
+
+function Add-SSHKey {
+    <#
+    .SYNOPSIS
+        Adds a key to the running Windows ssh-agent. Call after Set-SSHEnvironment.
+    .EXAMPLE
+        Add-SSHKey "$env:USERPROFILE\.ssh\id_ed25519_pi4ai"
+        Add-SSHKey "\\wsl$\Ubuntu\home\nicholasgrundl\.ssh\id_ed25519_pi4ai"
+    #>
+    param(
+        [Parameter(Mandatory=$true, Position=0)]
+        [string]$KeyPath
+    )
+
+    if (-not (Test-Path $KeyPath)) {
+        Write-Host "- SSH key not found: $KeyPath" -ForegroundColor Red
+        return $false
+    }
+
+    # Check if already loaded by comparing public key fingerprints
+    $pubKeyPath = "$KeyPath.pub"
+    if (Test-Path $pubKeyPath) {
+        $loadedKeys = ssh-add -l 2>&1
+        if ($LASTEXITCODE -eq 0) {
+            # Extract fingerprint of our key and compare against loaded keys
+            $keyFingerprint = (ssh-keygen -lf $pubKeyPath 2>&1) -split '\s+' | Select-Object -Index 1
+            if ($loadedKeys -match [regex]::Escape($keyFingerprint)) {
+                Write-Host "- SSH key already loaded: $(Split-Path $KeyPath -Leaf)" -ForegroundColor DarkGray
+                return $true
+            }
+        }
+    }
+
+    Write-Host "- Adding SSH key: $(Split-Path $KeyPath -Leaf)" -ForegroundColor Green
+    # Note: Windows ssh-add doesn't support -t (TTL) — keys persist until agent restart
+    ssh-add $KeyPath 2>&1 | Write-Host
+    return ($LASTEXITCODE -eq 0)
 }

@@ -50,7 +50,7 @@ function prompt {
     if ($gitBranch) {
         [void]$prompt.Append((Write-Host $gitBranch -ForegroundColor Yellow -NoNewline))
     }
-    
+
     [void]$prompt.Append((Write-Host "$('$' * ($nestedPromptLevel + 1)) " -ForegroundColor White -NoNewline))
 
     $LASTEXITCODE = $origLastExitCode
@@ -83,6 +83,9 @@ foreach ($module in $customModules) {
 
 # Call the SSH setup function
 Set-SSHEnvironment
+
+# Project-specific keys
+Add-SSHKey "$env:USERPROFILE\.ssh\id_ed25519_pi4ai"
 
 ###############################################################################
 # End of Profile Configuration
