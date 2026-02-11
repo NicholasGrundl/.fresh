@@ -83,8 +83,9 @@ set_ssh(){
     SSH_AUTH_SOCK="$HOME/.ssh/ssh-agent.sock"
 
     # Check if ssh-agent exists
-    runcount=$(ps -ef | grep "ssh-agent" | grep -v "grep" | wc -l)
-    if [ $runcount -eq 0 ]; then   
+    # runcount=$(ps -ef | grep "ssh-agent" | grep -v "grep" | wc -l)
+    runcount=$(pgrep -cx ssh-agent)
+    if [ $runcount -eq 0 ]; then
         echo "- Cannot find an SSH Agent. Starting one now."
         #no ssh-agent running
         if [ -S $SSH_AUTH_SOCK ]; then
@@ -112,12 +113,12 @@ set_ssh(){
     elif [ $agent_run_state -eq 0 ]; then
         #keys exist
         echo "- Found existing SSH keys."
-    fi    
+    fi
     echo "SSH Credentials are ready to go."
 }
 
 unset_ssh() {
-    
+
     if [ -f "$SSH_AUTH_SOCK" ]; then
         rm "$SSH_AUTH_SOCK"
     fi
@@ -131,7 +132,29 @@ unset_ssh() {
     #resets ssh state for bash setup to a known state
     killall ssh-agent
 
-}   
+}
+
+add_ssh_key() {
+    # Usage: add_ssh_key ~/.ssh/id_ed25519_pi4ai
+    # Adds a key to the running agent. Call after set_ssh.
+    local key="${1:?Usage: add_ssh_key <path_to_private_key>}"
+    local ttl="${2:-1d}"
+
+    if [ ! -f "$key" ]; then
+        echo "- SSH key not found: $key"
+        return 1
+    fi
+
+    # Check if this key is already loaded
+    # ssh-add -L lists public keys; compare against our key's public counterpart
+    if ssh-add -L 2>/dev/null | grep -qF "$(cat "${key}.pub" 2>/dev/null)"; then
+        echo "- SSH key already loaded: $(basename "$key")"
+        return 0
+    fi
+
+    echo "- Adding SSH key: $(basename "$key")"
+    ssh-add -t "$ttl" "$key"
+}
 
 
 ####################################
@@ -145,4 +168,68 @@ start_docker_if_wsl() {
                 --exec /usr/sbin/service docker start > /dev/null 2>&1
         fi
     fi
+}
+
+
+
+
+
+####################################
+#         Exploratory              #
+####################################
+
+explore() {
+    # Check if marimo is installed
+    if ! command -v marimo &> /dev/null; then
+        echo "marimo is not installed."
+        echo "Install it with: uv tool install marimo"
+        return 1
+    fi
+
+    # Determine filename with increment if needed
+    local base_filename="${1:-explore}"
+    local filename="${base_filename}.py"
+    local counter=1
+
+    while [ -f "$filename" ]; do
+        filename="${base_filename}_${counter}.py"
+        ((counter++))
+    done
+
+    # Create the templated marimo notebook
+    cat > "$filename" << 'EOF'
+# /// script
+# dependencies = [
+#   "pandas",
+#   "matplotlib",
+#   "numpy",
+# ]
+# ///
+
+import marimo
+
+__generated_with = "0.9.14"
+app = marimo.App()
+
+
+@app.cell
+def __():
+    import marimo as mo
+    import pandas as pd
+    import matplotlib.pyplot as plt
+    import numpy as np
+    return mo, np, pd, plt
+
+@app.cell
+def __():
+    # Your code here
+    return
+
+
+if __name__ == "__main__":
+    app.run()
+EOF
+
+    echo "Created $filename"
+    echo "Run with: marimo edit $filename"
 }

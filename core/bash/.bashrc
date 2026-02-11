@@ -1,25 +1,17 @@
 ################################################################################
 #                                                                              #
-#    ███╗   ██╗██╗ ██████╗██╗  ██╗ ██████╗ ██╗      █████╗ ███████╗            #
-#    ████╗  ██║██║██╔════╝██║  ██║██╔═══██╗██║     ██╔══██╗██╔════╝            #
-#    ██╔██╗ ██║██║██║     ███████║██║   ██║██║     ███████║███████╗            #
-#    ██║╚██╗██║██║██║     ██╔══██║██║   ██║██║     ██╔══██║╚════██║            #
-#    ██║ ╚████║██║╚██████╗██║  ██║╚██████╔╝███████╗██║  ██║███████║            #
-#    ╚═╝  ╚═══╝╚═╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝╚══════╝            #
-#                                                                              #
-#                                                                              #
-#         ██████╗ ██████╗ ██╗   ██╗███╗   ██╗██████╗ ██╗                       #
-#        ██╔════╝ ██╔══██╗██║   ██║████╗  ██║██╔══██╗██║                       #
-#        ██║  ███╗██████╔╝██║   ██║██╔██╗ ██║██║  ██║██║                       #
-#        ██║   ██║██╔══██╗██║   ██║██║╚██╗██║██║  ██║██║                       #
-#        ╚██████╔╝██║  ██║╚██████╔╝██║ ╚████║██████╔╝███████╗                  #
-#         ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═════╝ ╚══════╝                  #
-#                                                                              #
+#    ███╗   ██╗██╗ ██████╗██╗  ██╗ ██████╗ ██╗      █████╗ ███████╗           #
+#    ████╗  ██║██║██╔════╝██║  ██║██╔═══██╗██║     ██╔══██╗██╔════╝           #
+#    ██╔██╗ ██║██║██║     ███████║██║   ██║██║     ███████║███████╗           #
+#    ██║╚██╗██║██║██║     ██╔══██║██║   ██║██║     ██╔══██║╚════██║           #
+#    ██║ ╚████║██║╚██████╗██║  ██║╚██████╔╝███████╗██║  ██║███████║           #
+#    ╚═╝  ╚═══╝╚═╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝╚══════╝           #
 #                                                                              #
 #    "Science is more diverse in its terminology than its concepts"            #
 #                              — Amos Ron                                      #
 #                                                                              #
 ################################################################################
+
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -36,7 +28,7 @@ esac
 
 
 # ============================================================================
-# SHELL BEHAVIOR & HISTORY CONFIGURATION  
+# SHELL BEHAVIOR & HISTORY CONFIGURATION
 # ============================================================================
 # Don't put duplicate lines or lines starting with space in the history
 HISTCONTROL=ignoreboth
@@ -79,12 +71,6 @@ elif [ -d "/usr/local/cuda-12.8" ]; then
     export LD_LIBRARY_PATH="/usr/local/cuda-12.8/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"
 fi
 
-# Bun Runtime
-if [ -d "$HOME/.local/share/reflex/bun" ]; then
-    export BUN_INSTALL="$HOME/.local/share/reflex/bun"
-    export PATH="$BUN_INSTALL/bin:$PATH"
-fi
-
 
 # ============================================================================
 # TERMINAL APPEARANCE & PROMPT (PS1)
@@ -123,7 +109,7 @@ if command -v git &> /dev/null; then
     parse_git_branch() {
         git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
     }
-    
+
     if [ "$color_prompt" = yes ]; then
         PS1+='\[\033[90m\]:\[\033[0;33m\]$(parse_git_branch)'
     else
@@ -147,13 +133,6 @@ esac
 
 unset color_prompt force_color_prompt
 
-# Step 3: Starship Override
-# -------------------------
-if command -v starship &> /dev/null; then
-    eval "$(starship init bash)"
-fi
-
-
 # ============================================================================
 # COLORS & ALIASES
 # ============================================================================
@@ -174,8 +153,18 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+
 # Alert alias for long running commands
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# Alias batcat to bat if batcat exists
+if command -v batcat &> /dev/null; then
+    alias bat='batcat'
+fi
+
+if command -v rg &> /dev/null; then
+    alias rg='rg --smart-case'
+fi
 
 # ============================================================================
 # EXTERNAL CONFIGURATIONS
@@ -218,10 +207,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# Add a conda prompt prefix
-if command -v conda &> /dev/null; then
-    PS1="\[\033[01;36m\]"'($(basename "$CONDA_DEFAULT_ENV"))'"\[\033[90m\]:""$PS1"
-fi
+
 
 # >>>  Docker settings >>>
 # see (https://dev.to/bowmanjd/install-docker-on-windows-wsl-without-docker-desktop-34m9)
@@ -243,12 +229,42 @@ bind '"\t":menu-complete'
 
 
 # ============================================================================
+# Prompt Customizations
+# ============================================================================
+
+# Add a dynamic conda prompt prefix if availble
+if command -v conda &> /dev/null; then
+    PS1="\[\033[01;36m\]"'($(basename "$CONDA_DEFAULT_ENV"))'"\[\033[90m\]:""$PS1"
+fi
+
+# Starship Override if present
+# -------------------------
+if command -v starship &> /dev/null; then
+    eval "$(starship init bash)"
+fi
+
+# ============================================================================
 # SESSION MANAGEMENT
 # ============================================================================
 # SSH persistence (requires set_ssh function to be defined in custom functions)
 if declare -f set_ssh > /dev/null; then
     set_ssh
+    # Project-specific keys
+    if declare -f add_ssh_key > /dev/null; then
+        add_ssh_key ~/.ssh/id_ed25519_pi4ai
+    else
+        echo "Warning: add_ssh_key function not found in custom functions. Skipping project-specific SSH key addition."
+    fi
 else
     # Uncomment to see warning about missing function
     echo "Warning: set_ssh function not found in custom functions"
 fi
+
+export BROWSER=explorer.exe
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+. "$HOME/.local/bin/env"
