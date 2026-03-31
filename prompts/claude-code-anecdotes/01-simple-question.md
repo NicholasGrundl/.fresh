@@ -5,67 +5,45 @@
 ## Sequence Diagram
 
 ```
-User                    queryLoop()              API (Claude)
- │                          │                         │
- │  "what does this        │                         │
- │   project do?"          │                         │
- │─────────────────────────>│                         │
- │                          │                         │
- │            getSystemPrompt()                       │
- │            ─────────────────                       │
- │            Returns: [                              │
- │              intro section,                        │
- │              system section,                       │
- │              doing tasks section,                  │
- │              actions section,                      │
- │              using tools section,                  │
- │              tone and style section,               │
- │              output efficiency section,             │
- │              ─── DYNAMIC BOUNDARY ───              │
- │              session guidance section,              │
- │              memory prompt (MEMORY.md),             │
- │              env info (cwd, model, os),             │
- │              FRC section,                           │
- │              summarize tool results section         │
- │            ]                                       │
- │                          │                         │
- │            appendSystemContext(prompt, {            │
- │              gitStatus: "Current branch: main..."  │
- │            })                                      │
- │            ──────────────────────────               │
- │            Appends git status to system prompt      │
- │                          │                         │
- │            prependUserContext(messages, {           │
- │              claudeMd: "# CLAUDE.md\n...",         │
- │              currentDate: "Today's date is..."     │
- │            })                                      │
- │            ─────────────────────────                │
- │            Prepends <system-reminder> message       │
- │                          │                         │
- │            normalizeMessagesForAPI()                │
- │            ────────────────────────                 │
- │            Merges, reorders, strips virtual msgs    │
- │                          │                         │
- │                          │  messages.create({      │
- │                          │    system: [...],       │
- │                          │    messages: [          │
- │                          │      meta_user_msg,     │
- │                          │      real_user_msg      │
- │                          │    ],                   │
- │                          │    tools: [...],        │
- │                          │    ...                  │
- │                          │  })                     │
- │                          │────────────────────────>│
- │                          │                         │
- │                          │  streaming response     │
- │                          │  (text only, no tools)  │
- │                          │<────────────────────────│
- │                          │                         │
- │            needsFollowUp = false                   │
- │            → return { reason: 'completed' }        │
- │                          │                         │
- │  "This project is a..." │                         │
- │<─────────────────────────│                         │
+User        queryLoop()          API                          ╎ Notes
+ │              │                  │                           ╎
+ │  "what does  │                  │                           ╎
+ │   this       │                  │                           ╎
+ │   project    │                  │                           ╎
+ │   do?"       │                  │                           ╎
+ │─────────────>│                  │                           ╎
+ │              │                  │                           ╎
+ │              │ getSystemPrompt()│                           ╎ Build system prompt sections:
+ │              │ ───────┐         │                           ╎   Static: intro, system, tasks, actions,
+ │              │ <──────┘         │                           ╎     tools, tone, efficiency
+ │              │                  │                           ╎   ── DYNAMIC BOUNDARY ──
+ │              │                  │                           ╎   Dynamic: session, memory, env, FRC,
+ │              │                  │                           ╎     summarize tool results
+ │              │                  │                           ╎
+ │              │ appendSystemCtx()│                           ╎ Appends gitStatus to system prompt
+ │              │ ───────┐         │                           ╎
+ │              │ <──────┘         │                           ╎
+ │              │                  │                           ╎
+ │              │ prependUserCtx() │                           ╎ Inserts msg[0]: <system-reminder> with
+ │              │ ───────┐         │                           ╎   CLAUDE.md contents + currentDate
+ │              │ <──────┘         │                           ╎
+ │              │                  │                           ╎
+ │              │ normalizeMsgs()  │                           ╎ Merge, reorder, strip virtual messages
+ │              │ ───────┐         │                           ╎
+ │              │ <──────┘         │                           ╎
+ │              │                  │                           ╎
+ │              │ messages.create()│                           ╎ API call: system prompt + [meta_ctx,
+ │              │────────────────->│                           ╎   user_msg] + tools
+ │              │                  │                           ╎
+ │              │   text response  │                           ╎ Streaming text only, no tool_use blocks
+ │              │<─────────────────│                           ╎
+ │              │                  │                           ╎
+ │              │ needsFollowUp=F  │                           ╎ No tool_use → exit loop
+ │              │ return completed │                           ╎
+ │              │                  │                           ╎
+ │ "This project│                  │                           ╎
+ │  is a..."    │                  │                           ╎
+ │<─────────────│                  │                           ╎
 ```
 
 ## Full Conversation Text (What Claude Actually Sees)
