@@ -1,0 +1,115 @@
+# github.com/d3/d3/tree/main llms.txt
+
+> Bring data to life with SVG, Canvas and HTML. :bar_chart::chart_with_upwards_trend::tada: - d3/d3
+
+- [GitHub - d3/d3: Bring data to life with SVG, Canvas and HTML. :bar_chart::chart_with_upwards_trend::tada:](https://github.com/d3/d3/tree/main/): Bring data to life with SVG, Canvas and HTML. :bar_chart::chart_with_upwards_trend::tada: - d3/d3
+- [https://github.com/d3/d3/tree/main/login?return_to=https%3A%2F%2Fgithub.com%2Fd3%2Fd3%2Ftree%2Fmain](https://github.com/d3/d3/tree/main/login?return_to=https%3A%2F%2Fgithub.com%2Fd3%2Fd3%2Ftree%2Fmain): Unable to fetch page content
+- [GitHub Copilot · Your AI pair programmer · GitHub](https://github.com/features/copilot): GitHub Copilot works alongside you directly in your editor, suggesting whole lines or entire functions for you.
+- [GitHub Spark - Dream it. See it. Ship it. · GitHub](https://github.com/features/spark): GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.
+- [GitHub Models | Build AI-powered projects with industry-leading · GitHub](https://github.com/features/models): GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.
+- [GitHub Advanced Security · Built-in protection for every repository · GitHub](https://github.com/security/advanced-security): GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.
+- [GitHub Actions · GitHub](https://github.com/features/actions): GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.
+- [GitHub Codespaces · GitHub](https://github.com/features/codespaces): GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.
+- [GitHub Issues · Project planning for developers · GitHub](https://github.com/features/issues): GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.
+- [GitHub Code Review · GitHub](https://github.com/features/code-review): GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.
+- [GitHub Discussions · Developer Collaboration & Communication Tool · GitHub](https://github.com/features/discussions): GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.
+- [GitHub Code Search · GitHub](https://github.com/features/code-search): GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.
+- [Why Choose GitHub? · GitHub · GitHub](https://github.com/why-github): GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.
+- [Marketplace · Tools to improve your workflow · GitHub](https://github.com/marketplace): Find the tools that help your team build better, together.
+- [MCP Registry · GitHub](https://github.com/mcp): A faster, safer way to build with AI: the GitHub MCP Registry centralizes MCP servers for effortless discovery, integration, and open collaboration.
+- [GitHub Features · GitHub](https://github.com/features): GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.
+- [The AI Powered Developer Platform. · GitHub](https://github.com/enterprise): GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.
+- [GitHub for teams · Build like the best teams on the planet · GitHub](https://github.com/team): With CI/CD, Dependabot, and the world’s largest developer community, GitHub gives your team everything they need to ship better software faster.
+- [GitHub for Startups: Build your startup on GitHub · GitHub](https://github.com/enterprise/startups): Go from idea to IPO on the world’s best software development platform with free&nbsp;access to GitHub Enterprise
+- [https://github.com/d3/d3/tree/main/solutions/industry/nonprofits](https://github.com/d3/d3/tree/main/solutions/industry/nonprofits): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/solutions/use-case/devsecops](https://github.com/d3/d3/tree/main/solutions/use-case/devsecops): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/solutions/use-case/devops](https://github.com/d3/d3/tree/main/solutions/use-case/devops): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/solutions/use-case/ci-cd](https://github.com/d3/d3/tree/main/solutions/use-case/ci-cd): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/solutions/use-case](https://github.com/d3/d3/tree/main/solutions/use-case): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/solutions/industry/healthcare](https://github.com/d3/d3/tree/main/solutions/industry/healthcare): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/solutions/industry/financial-services](https://github.com/d3/d3/tree/main/solutions/industry/financial-services): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/solutions/industry/manufacturing](https://github.com/d3/d3/tree/main/solutions/industry/manufacturing): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/solutions/industry/government](https://github.com/d3/d3/tree/main/solutions/industry/government): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/solutions/industry](https://github.com/d3/d3/tree/main/solutions/industry): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/solutions](https://github.com/d3/d3/tree/main/solutions): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/resources/articles/ai](https://github.com/d3/d3/tree/main/resources/articles/ai): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/resources/articles/devops](https://github.com/d3/d3/tree/main/resources/articles/devops): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/resources/articles/security](https://github.com/d3/d3/tree/main/resources/articles/security): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/resources/articles/software-development](https://github.com/d3/d3/tree/main/resources/articles/software-development): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/resources/articles](https://github.com/d3/d3/tree/main/resources/articles): Unable to fetch page content
+- [Upcoming GitHub events, webinars & developer conferences · GitHub](https://github.com/resources/events): Discover upcoming GitHub events, webinars, and conferences. Connect with developers, explore new tools, and learn how to build, secure, and scale software with GitHub.
+- [Ebooks & Whitepapers · GitHub](https://github.com/resources/whitepapers): GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.
+- [Customer stories · GitHub](https://github.com/customer-stories): With collaborative project management, flexible security options, and easy admin, thousands of organizations are using GitHub and GitHub Enterprise to build better software. Hear what a few of them have to say.
+- [Solutions | Executive Insights · GitHub](https://github.com/solutions/executive-insights): Executive insights, curated just for you
+- [https://github.com/d3/d3/tree/main/sponsors](https://github.com/d3/d3/tree/main/sponsors): Unable to fetch page content
+- [The ReadME Project · Meet the people behind the projects you love · GitHub](https://github.com/readme)
+- [Topics on GitHub · GitHub](https://github.com/topics): GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.
+- [Trending  repositories on GitHub today · GitHub](https://github.com/trending): GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.
+- [Collections · GitHub](https://github.com/collections): GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.
+- [https://github.com/d3/d3/tree/main/enterprise](https://github.com/d3/d3/tree/main/enterprise): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/features/copilot/copilot-business](https://github.com/d3/d3/tree/main/features/copilot/copilot-business): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/premium-support](https://github.com/d3/d3/tree/main/premium-support): Unable to fetch page content
+- [Pricing · Plans for every developer · GitHub](https://github.com/pricing): Whether you're starting an open source project or choosing new tools for your team, we’ve got you covered.
+- [https://github.com/d3/d3/tree/main/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E&source=header-repo&source_repo=d3%2Fd3](https://github.com/d3/d3/tree/main/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E&source=header-repo&source_repo=d3%2Fd3): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3](https://github.com/d3/d3/tree/main/d3): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3](https://github.com/d3/d3/tree/main/d3/d3): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/login?return_to=%2Fd3%2Fd3](https://github.com/d3/d3/tree/main/login?return_to=%2Fd3%2Fd3): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/blob/main/LICENSE](https://github.com/d3/d3/tree/main/d3/d3/blob/main/LICENSE): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/stargazers](https://github.com/d3/d3/tree/main/d3/d3/stargazers): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/forks](https://github.com/d3/d3/tree/main/d3/d3/forks): Unable to fetch page content
+- [Best ai agent for test generation](https://keploy.io): Generate unit, api, integration tests for backend using AI coding agent, keploy
+- [https://github.com/d3/d3/tree/main/d3/d3/branches](https://github.com/d3/d3/tree/main/d3/d3/branches): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/tags](https://github.com/d3/d3/tree/main/d3/d3/tags): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/activity](https://github.com/d3/d3/tree/main/d3/d3/activity): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/issues](https://github.com/d3/d3/tree/main/d3/d3/issues): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/pulls](https://github.com/d3/d3/tree/main/d3/d3/pulls): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/discussions](https://github.com/d3/d3/tree/main/d3/d3/discussions): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/actions](https://github.com/d3/d3/tree/main/d3/d3/actions): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/security](https://github.com/d3/d3/tree/main/d3/d3/security): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/pulse](https://github.com/d3/d3/tree/main/d3/d3/pulse): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/commits/main/](https://github.com/d3/d3/tree/main/d3/d3/commits/main/): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/tree/main/.github](https://github.com/d3/d3/tree/main/d3/d3/tree/main/.github): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/tree/main/docs](https://github.com/d3/d3/tree/main/d3/d3/tree/main/docs): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/tree/main/img](https://github.com/d3/d3/tree/main/d3/d3/tree/main/img): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/tree/main/src](https://github.com/d3/d3/tree/main/d3/d3/tree/main/src): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/tree/main/test](https://github.com/d3/d3/tree/main/d3/d3/tree/main/test): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/blob/main/.eslintrc.json](https://github.com/d3/d3/tree/main/d3/d3/blob/main/.eslintrc.json): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/blob/main/.gitignore](https://github.com/d3/d3/tree/main/d3/d3/blob/main/.gitignore): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/blob/main/API.md](https://github.com/d3/d3/tree/main/d3/d3/blob/main/API.md): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/blob/main/CHANGES.md](https://github.com/d3/d3/tree/main/d3/d3/blob/main/CHANGES.md): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/blob/main/README.md](https://github.com/d3/d3/tree/main/d3/d3/blob/main/README.md): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/blob/main/package.json](https://github.com/d3/d3/tree/main/d3/d3/blob/main/package.json): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/blob/main/prebuild.sh](https://github.com/d3/d3/tree/main/d3/d3/blob/main/prebuild.sh): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/blob/main/yarn.lock](https://github.com/d3/d3/tree/main/d3/d3/blob/main/yarn.lock): Unable to fetch page content
+- [Releases · d3/d3 · GitHub](https://github.com/d3/d3/releases): Bring data to life with SVG, Canvas and HTML. :bar_chart::chart_with_upwards_trend::tada: - Releases · d3/d3
+- [https://github.com/d3/d3/tree/main/topics/visualization](https://github.com/d3/d3/tree/main/topics/visualization): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/topics/d3](https://github.com/d3/d3/tree/main/topics/d3): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/topics/svg](https://github.com/d3/d3/tree/main/topics/svg): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/topics/chart](https://github.com/d3/d3/tree/main/topics/chart): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/topics/charts](https://github.com/d3/d3/tree/main/topics/charts): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/topics/data-visualization](https://github.com/d3/d3/tree/main/topics/data-visualization): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/custom-properties](https://github.com/d3/d3/tree/main/d3/d3/custom-properties): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/watchers](https://github.com/d3/d3/tree/main/d3/d3/watchers): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/contact/report-content?content_url=https%3A%2F%2Fgithub.com%2Fd3%2Fd3&report=d3+%28user%29](https://github.com/d3/d3/tree/main/contact/report-content?content_url=https%3A%2F%2Fgithub.com%2Fd3%2Fd3&report=d3+%28user%29): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/releases](https://github.com/d3/d3/tree/main/d3/d3/releases): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/releases/tag/v7.9.0](https://github.com/d3/d3/tree/main/d3/d3/releases/tag/v7.9.0): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/network/dependents](https://github.com/d3/d3/tree/main/d3/d3/network/dependents): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/graphs/contributors](https://github.com/d3/d3/tree/main/d3/d3/graphs/contributors): Unable to fetch page content
+- [mbostock (Mike Bostock) · GitHub](https://github.com/mbostock): Building a better computational medium. Co-founder @observablehq. Creator @d3. Former @nytgraphics. Pronounced BOSS-tock. - mbostock
+- [jasondavies (Jason Davies) · GitHub](https://github.com/jasondavies): jasondavies has 45 repositories available. Follow their code on GitHub.
+- [Fil (Philippe Rivière) · GitHub](https://github.com/Fil): Vocateur. Fil has 156 repositories available. Follow their code on GitHub.
+- [kitmonisit (Kristofer Monisit) · GitHub](https://github.com/kitmonisit): kitmonisit has 47 repositories available. Follow their code on GitHub.
+- [27359794 (DanGo) · GitHub](https://github.com/27359794): 27359794 has 10 repositories available. Follow their code on GitHub.
+- [natevw (Nathan Vander Wilt) · GitHub](https://github.com/natevw): natevw has 158 repositories available. Follow their code on GitHub.
+- [yasirs · GitHub](https://github.com/yasirs): yasirs has 60 repositories available. Follow their code on GitHub.
+- [larskotthoff (Lars Kotthoff) · GitHub](https://github.com/larskotthoff): larskotthoff has 58 repositories available. Follow their code on GitHub.
+- [dandv (Dan Dascalescu) · GitHub](https://github.com/dandv): Consultant @anthropics. Ex @weaviate, @google, @yahoo.  Founded the Quantified Self Forum, Blueseed (the visa-free startup ship project) and 3 web startups. - dandv
+- [curran (Curran Kelleher) · GitHub](https://github.com/curran): Fascinated by dataviz as a means to understand the world and communicate that understanding to others. - curran
+- [square-build-bot · GitHub](https://github.com/square-build-bot): GitHub is where square-build-bot builds software.
+- [jheer (Jeffrey Heer) · GitHub](https://github.com/jheer): UW Professor. Data, visualization & interaction. @uwdata @ridge-ai @d3 @vega  - jheer
+- [leodutra (Leo Dutra) · GitHub](https://github.com/leodutra): Experienced Technologist | Full-Stack JavaScript, TypeScript, Rust, Java | Avid Learner | Currently studying LLMs and Rust - leodutra
+- [scottcheng (Scott Cheng) · GitHub](https://github.com/scottcheng): scottcheng has 58 repositories available. Follow their code on GitHub.
+- [https://github.com/d3/d3/tree/main/d3/d3/search?l=shell](https://github.com/d3/d3/tree/main/d3/d3/search?l=shell): Unable to fetch page content
+- [https://github.com/d3/d3/tree/main/d3/d3/search?l=javascript](https://github.com/d3/d3/tree/main/d3/d3/search?l=javascript): Unable to fetch page content
+- [GitHub · Build and ship software on a single, collaborative platform · GitHub](https://github.com): Join the world's most widely adopted, AI-powered developer platform where millions of developers, businesses, and the largest open source community build software that advances humanity.
+- [GitHub Security · GitHub](https://github.com/security): GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.

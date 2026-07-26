@@ -1,0 +1,36 @@
+# great_docs
+
+> An easy-to-use documentation site generator for Python packages
+
+## Docs
+
+### API Reference
+
+#### The GreatDocs Class
+> The central class that orchestrates site initialization, building, and deployment for your Python package documentation.
+
+- [GreatDocs](https://posit-dev.github.io/great-docs/reference/GreatDocs.html): GreatDocs class for creating beautiful API documentation sites
+
+#### GreatDocs Methods
+> Methods for installing dependencies, building the documentation site, launching a live preview, and validating links across all pages.
+
+- [GreatDocs.install](https://posit-dev.github.io/great-docs/reference/GreatDocs.install.html)
+- [GreatDocs.uninstall](https://posit-dev.github.io/great-docs/reference/GreatDocs.uninstall.html)
+- [GreatDocs.build](https://posit-dev.github.io/great-docs/reference/GreatDocs.build.html)
+- [GreatDocs.preview](https://posit-dev.github.io/great-docs/reference/GreatDocs.preview.html)
+- [GreatDocs.check_links](https://posit-dev.github.io/great-docs/reference/GreatDocs.check_links.html)
+
+#### Table Preview/Explorer
+> Generate styled HTML table previews from any tabular data source with `tbl_preview()`, and explore tables interactively with `tbl_explorer()`.
+
+- [tbl_preview](https://posit-dev.github.io/great-docs/reference/tbl_preview.html): Generate a self-contained HTML table preview from almost any tabular data source
+- [enable_tbl_preview](https://posit-dev.github.io/great-docs/reference/enable_tbl_preview.html): Register `tbl_preview()` as the default DataFrame display formatter
+- [disable_tbl_preview](https://posit-dev.github.io/great-docs/reference/disable_tbl_preview.html): Remove the `tbl_preview()` display formatter and restore defaults
+- [tbl_explorer](https://posit-dev.github.io/great-docs/reference/tbl_explorer.html): Generate an interactive table explorer from almost any tabular data source
+
+#### Skills
+> Install, check, and list Agent Skills from the Python API.
+
+- [install_skill](https://posit-dev.github.io/great-docs/reference/install_skill.html): Install a SKILL.md file for AI coding agents
+- [check_skill](https://posit-dev.github.io/great-docs/reference/check_skill.html): Check if installed skills are up to date
+- [list_skills](https://posit-dev.github.io/great-docs/reference/list_skills.html): List available skills from a package or URL

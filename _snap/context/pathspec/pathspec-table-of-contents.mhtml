@@ -1,0 +1,1605 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://python-path-specification.readthedocs.io/en/stable/index.html
+Subject: =?utf-8?Q?Welcome=20to=20pathspec=E2=80=99s=20documentation!=20=E2=80=94?=
+ =?utf-8?Q?=20PathSpec=201.1.1=20documentation?=
+Date: Sat, 13 Jun 2026 12:29:39 -0700
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--xmciKiJdYXu8nrfoOxIkO1CQ7jFW33LQECJa4hHxBA----"
+
+
+------MultipartBoundary--xmciKiJdYXu8nrfoOxIkO1CQ7jFW33LQECJa4hHxBA----
+Content-Type: text/html
+Content-ID: <frame-39DB5F5A27821DD392D4F623A44DD6B4@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://python-path-specification.readthedocs.io/en/stable/index.html
+
+<!DOCTYPE html><html lang=3D"en" data-content_root=3D"./"><head><meta http-=
+equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8"><link rel=3D"=
+stylesheet" type=3D"text/css" href=3D"cid:css-6ff60ae8-b149-411c-8e3f-30fb8=
+23bacbc@mhtml.blink" />
+   =20
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1.0"><meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+
+    <title>Welcome to pathspec=E2=80=99s documentation! =E2=80=94 PathSpec =
+1.1.1 documentation</title>
+    <link rel=3D"stylesheet" type=3D"text/css" href=3D"https://python-path-=
+specification.readthedocs.io/en/stable/_static/pygments.css?v=3D03e43079">
+    <link rel=3D"stylesheet" type=3D"text/css" href=3D"https://python-path-=
+specification.readthedocs.io/en/stable/_static/sphinxdoc.css?v=3D34905f61">
+   =20
+   =20
+   =20
+    <link rel=3D"index" title=3D"Index" href=3D"https://python-path-specifi=
+cation.readthedocs.io/en/stable/genindex.html">
+    <link rel=3D"search" title=3D"Search" href=3D"https://python-path-speci=
+fication.readthedocs.io/en/stable/search.html">
+    <link rel=3D"next" title=3D"PathSpec" href=3D"https://python-path-speci=
+fication.readthedocs.io/en/stable/readme.html">=20
+  <meta name=3D"readthedocs-project-slug" content=3D"python-path-specificat=
+ion"><meta name=3D"readthedocs-version-slug" content=3D"stable"><meta name=
+=3D"readthedocs-resolver-filename" content=3D"/index.html"><meta name=3D"re=
+adthedocs-http-status" content=3D"200"></head><body cz-shortcut-listen=3D"t=
+rue">
+    <div class=3D"related" role=3D"navigation" aria-label=3D"Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class=3D"right" style=3D"margin-right: 10px">
+          <a href=3D"https://python-path-specification.readthedocs.io/en/st=
+able/genindex.html" title=3D"General Index" accesskey=3D"I">index</a></li>
+        <li class=3D"right">
+          <a href=3D"https://python-path-specification.readthedocs.io/en/st=
+able/py-modindex.html" title=3D"Python Module Index">modules</a> |</li>
+        <li class=3D"right">
+          <a href=3D"https://python-path-specification.readthedocs.io/en/st=
+able/readme.html" title=3D"PathSpec" accesskey=3D"N">next</a> |</li>
+        <li class=3D"nav-item nav-item-0"><a href=3D"https://python-path-sp=
+ecification.readthedocs.io/en/stable/index.html#">PathSpec 1.1.1 documentat=
+ion</a> =C2=BB</li>
+        <li class=3D"nav-item nav-item-this"><a href=3D"https://python-path=
+-specification.readthedocs.io/en/stable/index.html">Welcome to pathspec=E2=
+=80=99s documentation!</a></li>=20
+      </ul>
+    </div> =20
+
+    <div class=3D"document">
+      <div class=3D"documentwrapper">
+        <div class=3D"bodywrapper">
+          <div class=3D"body" role=3D"main">
+           =20
+  <section id=3D"welcome-to-pathspec-s-documentation">
+<h1>Welcome to pathspec=E2=80=99s documentation!<a class=3D"headerlink" hre=
+f=3D"https://python-path-specification.readthedocs.io/en/stable/index.html#=
+welcome-to-pathspec-s-documentation" title=3D"Link to this heading">=C2=B6<=
+/a></h1>
+<div class=3D"toctree-wrapper compound">
+<p class=3D"caption" role=3D"heading"><span class=3D"caption-text">Contents=
+:</span></p>
+<ul>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/readme.html">PathSpec</a><=
+ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/readme.html#tutorial">Tuto=
+rial</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/readme.html#performance">P=
+erformance</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/readme.html#faq">FAQ</a></=
+li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/readme.html#license">Licen=
+se</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/readme.html#source">Source=
+</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/readme.html#installation">=
+Installation</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/readme.html#documentation"=
+>Documentation</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/readme.html#other-language=
+s">Other Languages</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/api.html">API</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/api.html#module-pathspec">=
+pathspec</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/api.html#module-pathspec.p=
+athspec">pathspec.pathspec</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/api.html#module-pathspec.g=
+itignore">pathspec.gitignore</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/api.html#module-pathspec.b=
+ackend">pathspec.backend</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/api.html#module-pathspec.p=
+attern">pathspec.pattern</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/api.html#module-pathspec.p=
+atterns.gitignore">pathspec.patterns.gitignore</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/api.html#module-pathspec.p=
+atterns.gitignore.base">pathspec.patterns.gitignore.base</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/api.html#module-pathspec.p=
+atterns.gitignore.basic">pathspec.patterns.gitignore.basic</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/api.html#module-pathspec.p=
+atterns.gitignore.spec">pathspec.patterns.gitignore.spec</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/api.html#module-pathspec.u=
+til">pathspec.util</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html">Change Histo=
+ry</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id1">1.1.1 (2=
+026-04-26)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id2">1.1.0 (2=
+026-04-22)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id3">1.0.4 (2=
+026-01-26)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id4">1.0.3 (2=
+026-01-09)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id5">1.0.2 (2=
+026-01-07)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id6">1.0.1 (2=
+026-01-06)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id7">1.0.0 (2=
+026-01-05)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id8">0.12.1 (=
+2023-12-10)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id9">0.12.0 (=
+2023-12-09)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id10">0.11.2 =
+(2023-07-28)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id11">0.11.1 =
+(2023-03-14)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id12">0.11.0 =
+(2023-01-24)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id13">0.10.3 =
+(2022-12-09)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id14">0.10.2 =
+(2022-11-12)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id15">0.10.1 =
+(2022-09-02)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id16">0.10.0 =
+(2022-08-30)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id17">0.9.0 (=
+2021-07-17)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id18">0.8.1 (=
+2020-11-07)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id19">0.8.0 (=
+2020-04-09)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id20">0.7.0 (=
+2019-12-27)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id21">0.6.0 (=
+2019-10-03)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id22">0.5.9 (=
+2018-09-15)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id23">0.5.8 (=
+2018-09-15)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id24">0.5.7 (=
+2018-08-14)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id25">0.5.6 (=
+2018-04-06)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id26">0.5.5 (=
+2017-09-09)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id27">0.5.4 (=
+2017-09-09)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id28">0.5.3 (=
+2017-07-01)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id29">0.5.2 (=
+2017-04-04)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id30">0.5.1 (=
+2017-04-04)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id31">0.5.0 (=
+2016-08-22)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id32">0.4.0 (=
+2016-07-15)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id33">0.3.4 (=
+2015-08-24)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id34">0.3.3 (=
+2014-11-21)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id35">0.3.2 (=
+2014-11-08)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id36">0.3.1 (=
+2014-09-17)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id37">0.3.0 (=
+2014-09-17)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id38">0.2.2 (=
+2013-12-17)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id39">0.2.1 (=
+2013-12-17)</a></li>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/changes.html#id40">0.2.0 (=
+2013-12-07)</a></li>
+</ul>
+</li>
+<li class=3D"toctree-l1"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/upgrading.html">Upgrade Gu=
+ide</a><ul>
+<li class=3D"toctree-l2"><a class=3D"reference internal" href=3D"https://py=
+thon-path-specification.readthedocs.io/en/stable/upgrading.html#from-0-12-1=
+-to-1-0-0">From 0.12.1 to 1.0.0</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id=3D"indices-and-tables">
+<h1>Indices and tables<a class=3D"headerlink" href=3D"https://python-path-s=
+pecification.readthedocs.io/en/stable/index.html#indices-and-tables" title=
+=3D"Link to this heading">=C2=B6</a></h1>
+<ul class=3D"simple">
+<li><p><a class=3D"reference internal" href=3D"https://python-path-specific=
+ation.readthedocs.io/en/stable/genindex.html"><span class=3D"std std-ref">I=
+ndex</span></a></p></li>
+<li><p><a class=3D"reference internal" href=3D"https://python-path-specific=
+ation.readthedocs.io/en/stable/py-modindex.html"><span class=3D"std std-ref=
+">Module Index</span></a></p></li>
+<li><p><a class=3D"reference internal" href=3D"https://python-path-specific=
+ation.readthedocs.io/en/stable/search.html"><span class=3D"std std-ref">Sea=
+rch Page</span></a></p></li>
+</ul>
+</section>
+
+
+            <div class=3D"clearer"></div>
+          <div class=3D"raised adaptive-css" data-ea-type=3D"text" data-ea-=
+manual=3D"true" data-ea-publisher=3D"readthedocs" data-ea-keywords=3D"gitig=
+nore-patterns|python|readthedocs-project-143735|readthedocs-project-python-=
+path-specification|wildmatch" data-ea-campaign-types=3D"community|house|pai=
+d" id=3D"readthedocs-ea-text-nostyle-nodoctool"></div></div>
+        </div>
+      </div>
+      <div class=3D"sphinxsidebar" role=3D"navigation" aria-label=3D"Main">
+        <div class=3D"sphinxsidebarwrapper">
+  <div>
+    <h3><a href=3D"https://python-path-specification.readthedocs.io/en/stab=
+le/index.html#">Table of Contents</a></h3>
+    <ul>
+<li><a class=3D"reference internal" href=3D"https://python-path-specificati=
+on.readthedocs.io/en/stable/index.html#">Welcome to pathspec=E2=80=99s docu=
+mentation!</a></li>
+<li><a class=3D"reference internal" href=3D"https://python-path-specificati=
+on.readthedocs.io/en/stable/index.html#indices-and-tables">Indices and tabl=
+es</a></li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class=3D"topless"><a href=3D"https://python-path-specification.readt=
+hedocs.io/en/stable/readme.html" title=3D"next chapter">PathSpec</a></p>
+  </div>
+  <div role=3D"note" aria-label=3D"source link">
+    <h3>This Page</h3>
+    <ul class=3D"this-page-menu">
+      <li><a href=3D"https://python-path-specification.readthedocs.io/en/st=
+able/_sources/index.rst.txt" rel=3D"nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id=3D"searchbox" style=3D"display: block;" role=3D"search">
+  <h3 id=3D"searchlabel">Quick search</h3>
+    <div class=3D"searchformwrapper">
+    <form class=3D"search" action=3D"https://python-path-specification.read=
+thedocs.io/en/stable/search.html" method=3D"get">
+      <input type=3D"text" name=3D"q" aria-labelledby=3D"searchlabel" autoc=
+omplete=3D"off" autocorrect=3D"off" autocapitalize=3D"off" spellcheck=3D"fa=
+lse">
+      <input type=3D"submit" value=3D"Go">
+    </form>
+    </div>
+</search>
+
+        </div>
+      </div>
+      <div class=3D"clearer"></div>
+    </div>
+    <div class=3D"related" role=3D"navigation" aria-label=3D"Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class=3D"right" style=3D"margin-right: 10px">
+          <a href=3D"https://python-path-specification.readthedocs.io/en/st=
+able/genindex.html" title=3D"General Index">index</a></li>
+        <li class=3D"right">
+          <a href=3D"https://python-path-specification.readthedocs.io/en/st=
+able/py-modindex.html" title=3D"Python Module Index">modules</a> |</li>
+        <li class=3D"right">
+          <a href=3D"https://python-path-specification.readthedocs.io/en/st=
+able/readme.html" title=3D"PathSpec">next</a> |</li>
+        <li class=3D"nav-item nav-item-0"><a href=3D"https://python-path-sp=
+ecification.readthedocs.io/en/stable/index.html#">PathSpec 1.1.1 documentat=
+ion</a> =C2=BB</li>
+        <li class=3D"nav-item nav-item-this"><a href=3D"https://python-path=
+-specification.readthedocs.io/en/stable/index.html">Welcome to pathspec=E2=
+=80=99s documentation!</a></li>=20
+      </ul>
+    </div>
+    <div class=3D"footer" role=3D"contentinfo">
+    =C2=A9 Copyright 2013-2026 Caleb P. Burns.
+      Created using <a href=3D"https://www.sphinx-doc.org/">Sphinx</a> 9.1.=
+0.
+    </div>
+ =20
+<readthedocs-flyout><template shadowmode=3D"open"><!---->
+      <div class=3D" floating container bottom-right ">
+        <!--?lit$614162419$-->
+      <header>
+        <img class=3D"logo" alt=3D"Read the Docs" src=3D"data:image/svg+xml=
+;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5=
+vIj8+Cjxzdmc6c3ZnCiAgIHZlcnNpb249IjEuMSIKICAgaWQ9InN2ZyIKICAgeD0iMHB4IgogIC=
+B5PSIwcHgiCiAgIHZpZXdCb3g9IjY5NCAxOTcgMzQ2LjY5ODU1IDM5OS45ODQ3NyIKICAgc29ka=
+XBvZGk6ZG9jbmFtZT0ibG9nby1saWdodC5zdmciCiAgIHdpZHRoPSIzNDYuNjk4NTUiCiAgIGhl=
+aWdodD0iMzk5Ljk4NDc3IgogICBpbmtzY2FwZTp2ZXJzaW9uPSIxLjMuMiAoMDkxZTIwZWYwZiw=
+gMjAyMy0xMS0yNSwgY3VzdG9tKSIKICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2=
+NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiCiAgIHhtbG5zOnNvZGlwb2RpPSJodHRwOi8vc=
+29kaXBvZGkuc291cmNlZm9yZ2UubmV0L0RURC9zb2RpcG9kaS0wLmR0ZCIKICAgeG1sbnM6c3Zn=
+PSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHN2ZzpkZWZzCiAgICAgaWQ9ImRlZnM=
+xMiIgLz4KICA8c29kaXBvZGk6bmFtZWR2aWV3CiAgICAgaWQ9Im5hbWVkdmlldzEyIgogICAgIH=
+BhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBib3JkZXJjb2xvcj0iIzAwMDAwMCIKICAgICBib3JkZ=
+XJvcGFjaXR5PSIwLjI1IgogICAgIGlua3NjYXBlOnNob3dwYWdlc2hhZG93PSIyIgogICAgIGlu=
+a3NjYXBlOnBhZ2VvcGFjaXR5PSIwLjAiCiAgICAgaW5rc2NhcGU6cGFnZWNoZWNrZXJib2FyZD0=
+iMCIKICAgICBpbmtzY2FwZTpkZXNrY29sb3I9IiNkMWQxZDEiCiAgICAgaW5rc2NhcGU6em9vbT=
+0iMS4yNTIiCiAgICAgaW5rc2NhcGU6Y3g9Ijk5OC40MDI1NiIKICAgICBpbmtzY2FwZTpjeT0iM=
+Tk5LjY4MDUxIgogICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMzQ0MCIKICAgICBpbmtzY2Fw=
+ZTp3aW5kb3ctaGVpZ2h0PSIxMzg5IgogICAgIGlua3NjYXBlOndpbmRvdy14PSIwIgogICAgIGl=
+ua3NjYXBlOndpbmRvdy15PSIyNyIKICAgICBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIxIg=
+ogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9InN2ZyIgLz4KICA8c3ZnOmcKICAgICBpZD0ib=
+G9nbyIKICAgICB0cmFuc2Zvcm09Im1hdHJpeCgwLjU1NzUzNjQ0LDAsMCwwLjU1NzUzNjQ0LDY2=
+LjUzMTgxMiwxMDUwLjEyNjIpIj4KICAgIDxzdmc6cGF0aAogICAgICAgc3R5bGU9ImZpbGw6I2Z=
+jZmNmYyIKICAgICAgIGQ9Im0gMTQwOC4xLC0xMTgxLjcgYyAtNy41LDEgLTEyLjcsNy44IC0xMS=
+43LDE1LjMgMC43LDUuNCA0LjYsOS45IDkuOSwxMS4zIDAsMCAzMy4yLDExIDg5LjcsMTUuNiA0N=
+S40LDMuNyA5Ni45LC0zLjIgOTYuOSwtMy4yIDcuNSwtMC4yIDEzLjUsLTYuNSAxMy4yLC0xNCAt=
+MC4zLC03LjUgLTYuNSwtMTMuNSAtMTQsLTEzLjIgLTAuOSwwIC0xLjgsMC4xIC0yLjYsMC4zIDA=
+sMCAtNTAuNCw2LjIgLTkxLjMsMi45IC01NCwtNC40IC04My40LC0xNC4zIC04My40LC0xNC4zIC=
+0yLjIsLTAuNyAtNC41LC0xIC02LjcsLTAuNyB6IG0gMCwtNjcuNiBjIC03LjUsMSAtMTIuNyw3L=
+jggLTExLjcsMTUuMyAwLjcsNS40IDQuNiw5LjkgOS45LDExLjMgMCwwIDMzLjIsMTEgODkuNywx=
+NS42IDQ1LjQsMy43IDk2LjksLTMuMiA5Ni45LC0zLjIgNy41LC0wLjIgMTMuNSwtNi41IDEzLjI=
+sLTE0IC0wLjMsLTcuNSAtNi41LC0xMy41IC0xNCwtMTMuMiAtMC45LDAgLTEuOCwwLjEgLTIuNi=
+wwLjMgMCwwIC01MC40LDYuMiAtOTEuMywyLjkgLTU0LC00LjQgLTgzLjQsLTE0LjMgLTgzLjQsL=
+TE0LjMgLTIuMiwtMC43IC00LjUsLTEgLTYuNywtMC43IHogbSAwLC02Ny42IGMgLTcuNSwxIC0x=
+Mi43LDcuOCAtMTEuNywxNS4zIDAuNyw1LjQgNC42LDkuOSA5LjksMTEuMyAwLDAgMzMuMiwxMSA=
+4OS43LDE1LjYgNDUuNCwzLjcgOTYuOSwtMy4yIDk2LjksLTMuMiA3LjUsLTAuMiAxMy41LC02Lj=
+UgMTMuMiwtMTQgLTAuMywtNy41IC02LjUsLTEzLjUgLTE0LC0xMy4yIC0wLjksMCAtMS44LDAuM=
+SAtMi42LDAuMyAwLDAgLTUwLjQsNi4yIC05MS4zLDIuOSAtNTQsLTQuNCAtODMuNCwtMTQuMyAt=
+ODMuNCwtMTQuMyAtMi4yLC0wLjcgLTQuNSwtMSAtNi43LC0wLjcgeiBtIDAsLTY3LjUgYyAtNy4=
+1LDEgLTEyLjcsNy44IC0xMS43LDE1LjMgMC43LDUuNCA0LjYsOS45IDkuOSwxMS4zIDAsMCAzMy=
+4yLDExIDg5LjcsMTUuNiA0NS40LDMuNyA5Ni45LC0zLjIgOTYuOSwtMy4yIDcuNSwtMC4yIDEzL=
+jUsLTYuNSAxMy4yLC0xNCAtMC4zLC03LjUgLTYuNSwtMTMuNSAtMTQsLTEzLjIgLTAuOSwwIC0x=
+LjgsMC4xIC0yLjYsMC4zIDAsMCAtNTAuNCw2LjIgLTkxLjMsMi45IC01NCwtNC40IC04My40LC0=
+xNC4zIC04My40LC0xNC4zIC0yLjIsLTAuOCAtNC41LC0xIC02LjcsLTAuNyB6IG0gLTk0LjcsLT=
+cxLjMgYyAtNzEsMC41IC05Ny41LDIyLjMgLTk3LjUsMjIuMyB2IDUzMC4zIGMgMCwwIDI1LjgsL=
+TIyLjMgMTA5LC0xOC45IDgzLjIsMy40IDEwMC4zLDMyLjYgMjAyLjUsMzQuNiAxMDIuMiwyLjEg=
+MTI3LjksLTE1LjcgMTI3LjksLTE1LjcgbCAxLjUsLTU0MC42IGMgMCwwIC00NiwxMyAtMTM1LjU=
+sMTMuNyAtODkuNSwwLjcgLTExMSwtMjIuOCAtMTkzLjIsLTI1LjUgLTUuMSwtMC4xIC0xMCwtMC=
+4yIC0xNC43LC0wLjIgeiBtIDU5LjQsMzQuNiBjIDAsMCA0MywxNC4yIDEyMi41LDE4LjIgNjcuM=
+iwzLjMgMTM0LjUsLTYuNiAxMzQuNSwtNi42IFYgLTkyOSBjIDAsMCAtMzQuMSwxNy45IC0xMTku=
+MywxMS44IC02NiwtNC43IC0xMzguNywtMjkuNyAtMTM4LjcsLTI5LjcgeiBtIC00MS41LDEyLjU=
+gYyA3LjYsMCAxMy43LDYuMiAxMy43LDEzLjcgMCw3LjUgLTYuMiwxMy43IC0xMy43LDEzLjcgMC=
+wwIC0yMi4zLDAuMSAtMzUuOCwxLjUgLTIyLjgsMi4zIC0zOC4zLDEwLjYgLTM4LjMsMTAuNiAtN=
+i43LDMuNSAtMTUsMSAtMTguNSwtNS43IC0zLjUsLTYuNyAtMSwtMTUgNS43LC0xOC41IDAsMCAw=
+LDAgMCwwIDAsMCAyMC4yLC0xMC43IDQ4LjQsLTEzLjUgMTYuMywtMS43IDM4LjUsLTEuOCAzOC4=
+1LC0xLjggeiBtIC0xMy4yLDY3LjggYyA3LjYsLTAuMiAxMy4zLDAgMTMuMywwIDcuNSwwLjkgMT=
+IuOSw3LjggMTIsMTUuMyAtMC44LDYuMyAtNS43LDExLjIgLTEyLDEyIDAsMCAtMjIuMywwLjEgL=
+TM1LjgsMS41IC0yMi44LDIuMyAtMzguMywxMC42IC0zOC4zLDEwLjYgLTYuNywzLjUgLTE1LDAu=
+OSAtMTguNSwtNS44IC0zLjUsLTYuNyAtMC45LC0xNSA1LjgsLTE4LjUgMCwwIDIwLjIsLTEwLjc=
+gNDguNCwtMTMuNSA3LjksLTAuOSAxNy41LC0xLjQgMjUuMSwtMS42IHogbSAxMy4yLDY3LjUgYy=
+A3LjYsMCAxMy43LDYuMiAxMy43LDEzLjcgMCw3LjYgLTYuMiwxMy43IC0xMy43LDEzLjcgMCwwI=
+C0yMi4zLC0wLjEgLTM1LjgsMS4yIC0yMi44LDIuMyAtMzguMywxMC42IC0zOC4zLDEwLjYgLTYu=
+NywzLjUgLTE1LDAuOSAtMTguNSwtNS44IC0zLjUsLTYuNyAtMC45LC0xNSA1LjgsLTE4LjUgMCw=
+wIDIwLjIsLTEwLjcgNDguNCwtMTMuNSAxNi4yLC0xLjUgMzguNCwtMS40IDM4LjQsLTEuNCB6Ig=
+ogICAgICAgaWQ9InBhdGgxIiAvPgogIDwvc3ZnOmc+CiAgPGRpdgogICAgIGlkPSJzYWthLWd1a=
+S1yb290Ij4KICAgIDxkaXY+CiAgICAgIDxkaXY+CiAgICAgICAgPHN0eWxlIC8+CiAgICAgIDwv=
+ZGl2PgogICAgPC9kaXY+CiAgPC9kaXY+Cjwvc3ZnOnN2Zz4K">
+        <!--?lit$614162419$--> <!--?lit$614162419$--><span class=3D"version=
+">
+        <!--?lit$614162419$--><svg data-prefix=3D"fas" data-icon=3D"code-br=
+anch" class=3D"svg-inline--fa fa-code-branch icon" role=3D"img" viewBox=3D"=
+0 0 448 512" aria-hidden=3D"true"><path fill=3D"currentColor" d=3D"M80 104a=
+24 24 0 1 0 0-48 24 24 0 1 0 0 48zm80-24c0 32.8-19.7 61-48 73.3l0 70.7 176 =
+0c26.5 0 48-21.5 48-48l0-22.7c-28.3-12.3-48-40.5-48-73.3 0-44.2 35.8-80 80-=
+80s80 35.8 80 80c0 32.8-19.7 61-48 73.3l0 22.7c0 61.9-50.1 112-112 112l-176=
+ 0 0 70.7c28.3 12.3 48 40.5 48 73.3 0 44.2-35.8 80-80 80S0 476.2 0 432c0-32=
+.8 19.7-61 48-73.3l0-205.3C19.7 141 0 112.8 0 80 0 35.8 35.8 0 80 0s80 35.8=
+ 80 80zm232 0a24 24 0 1 0 -48 0 24 24 0 1 0 48 0zM80 456a24 24 0 1 0 0-48 2=
+4 24 0 1 0 0 48z"></path></svg> <!--?lit$614162419$-->stable
+      </span>=20
+        <span class=3D"caret"><!--?lit$614162419$--><svg data-prefix=3D"fas=
+" data-icon=3D"caret-down" class=3D"svg-inline--fa fa-caret-down icon" role=
+=3D"img" viewBox=3D"0 0 320 512" aria-hidden=3D"true"><path fill=3D"current=
+Color" d=3D"M140.3 376.8c12.6 10.2 31.1 9.5 42.8-2.2l128-128c9.2-9.2 11.9-2=
+2.9 6.9-34.9S301.4 192 288.5 192l-256 0c-12.9 0-24.6 7.8-29.6 19.8S.7 237.5=
+ 9.9 246.6l128 128 2.4 2.2z"></path></svg></span>
+      </header>
+   =20
+        <main class=3D" closed ">
+          <!--?lit$614162419$--> <!--?lit$614162419$-->
+      <dl class=3D"versions">
+        <dt>Versions</dt>
+        <!--?lit$614162419$--><!----><dd><!--?lit$614162419$--><a href=3D"h=
+ttps://python-path-specification.readthedocs.io/en/latest/"><!--?lit$614162=
+419$-->latest</a></dd><!----><!----><dd><!--?lit$614162419$--><strong><!--?=
+lit$614162419$--><a href=3D"https://python-path-specification.readthedocs.i=
+o/en/stable/"><!--?lit$614162419$-->stable</a></strong></dd><!----><!----><=
+dd><!--?lit$614162419$--><a href=3D"https://python-path-specification.readt=
+hedocs.io/en/v1.1.1/"><!--?lit$614162419$-->v1.1.1</a></dd><!----><!----><d=
+d><!--?lit$614162419$--><a href=3D"https://python-path-specification.readth=
+edocs.io/en/v1.1.0/"><!--?lit$614162419$-->v1.1.0</a></dd><!----><!----><dd=
+><!--?lit$614162419$--><a href=3D"https://python-path-specification.readthe=
+docs.io/en/v1.0.4/"><!--?lit$614162419$-->v1.0.4</a></dd><!----><!----><dd>=
+<!--?lit$614162419$--><a href=3D"https://python-path-specification.readthed=
+ocs.io/en/v1.0.3/"><!--?lit$614162419$-->v1.0.3</a></dd><!----><!----><dd><=
+!--?lit$614162419$--><a href=3D"https://python-path-specification.readthedo=
+cs.io/en/v1.0.2/"><!--?lit$614162419$-->v1.0.2</a></dd><!----><!----><dd><!=
+--?lit$614162419$--><a href=3D"https://python-path-specification.readthedoc=
+s.io/en/v1.0.1/"><!--?lit$614162419$-->v1.0.1</a></dd><!----><!----><dd><!-=
+-?lit$614162419$--><a href=3D"https://python-path-specification.readthedocs=
+.io/en/v1.0.0/"><!--?lit$614162419$-->v1.0.0</a></dd><!----><!----><dd><!--=
+?lit$614162419$--><a href=3D"https://python-path-specification.readthedocs.=
+io/en/v0.12.1/"><!--?lit$614162419$-->v0.12.1</a></dd><!----><!----><dd><!-=
+-?lit$614162419$--><a href=3D"https://python-path-specification.readthedocs=
+.io/en/v0.12.0/"><!--?lit$614162419$-->v0.12.0</a></dd><!---->
+      </dl>
+   =20
+          <!--?lit$614162419$--> <!--?lit$614162419$-->
+      <dl>
+        <dt>On Read the Docs</dt>
+        <dd>
+          <a href=3D"https://app.readthedocs.org/projects/python-path-speci=
+fication/?utm_source=3Dpython-path-specification&amp;utm_content=3Dflyout">=
+Project Home</a>
+        </dd>
+        <dd>
+          <a href=3D"https://app.readthedocs.org/projects/python-path-speci=
+fication/builds/?utm_source=3Dpython-path-specification&amp;utm_content=3Df=
+lyout">Builds</a>
+        </dd>
+      </dl>
+   =20
+          <!--?lit$614162419$--> <!--?lit$614162419$-->
+        <dl>
+          <dt>Search</dt>
+          <dd>
+            <form id=3D"flyout-search-form">
+              <input type=3D"text" name=3D"q" aria-label=3D"Search docs" pl=
+aceholder=3D"Search docs">
+            </form>
+          </dd>
+        </dl>
+     =20
+          <hr>
+          <!--?lit$614162419$-->
+      <small>
+        <span>
+          <a href=3D"https://docs.readthedocs.io/page/addons.html?utm_sourc=
+e=3Dpython-path-specification&amp;utm_content=3Dflyout">Addons documentatio=
+n</a></span>
+        <span> =E2=80=95 </span>
+        <span>Hosted by
+          <a href=3D"https://about.readthedocs.com/?utm_source=3Dpython-pat=
+h-specification&amp;utm_content=3Dflyout">Read the Docs</a></span>
+      </small>
+   =20
+        </main>
+      </div>
+    </template></readthedocs-flyout><readthedocs-notification class=3D"rais=
+ed toast"><template shadowmode=3D"open"><!----></template></readthedocs-not=
+ification><readthedocs-search class=3D"raised floating"><template shadowmod=
+e=3D"open"><!---->
+     =20
+    </template></readthedocs-search><readthedocs-hotkeys><template shadowmo=
+de=3D"open"><!----></template></readthedocs-hotkeys></body></html>
+------MultipartBoundary--xmciKiJdYXu8nrfoOxIkO1CQ7jFW33LQECJa4hHxBA----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://python-path-specification.readthedocs.io/en/stable/_static/navigation.png
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAA8CAIAAAAok0etAAAAP0lEQVR4AbVKgQ3AAAyh/1/bA2o2
+ccKaFDC7OwDmPZJhe1izmd8b52FBYT/kj28WLX1fL+vk0adrngzq5s9/AGiqIU874CzDAAAAAElF
+TkSuQmCC
+
+------MultipartBoundary--xmciKiJdYXu8nrfoOxIkO1CQ7jFW33LQECJa4hHxBA----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://python-path-specification.readthedocs.io/en/stable/_static/contents.png
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAAoCAIAAACw1AcgAAAAMklEQVR4AZWLNQKAQBDEkvz/u1gF
+HXbVre9I63EEhMZJSEL8WgzfP4/v+ed5DBk0asAFfZAETi6TtXAAAAAASUVORK5CYII=
+
+------MultipartBoundary--xmciKiJdYXu8nrfoOxIkO1CQ7jFW33LQECJa4hHxBA----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://python-path-specification.readthedocs.io/en/stable/_static/basic.css
+
+@charset "utf-8";
+
+div.clearer { clear: both; }
+
+div.section::after { display: block; content: ""; clear: left; }
+
+div.related { width: 100%; font-size: 90%; }
+
+div.related h3 { display: none; }
+
+div.related ul { margin: 0px; padding: 0px 0px 0px 10px; list-style: none; =
+}
+
+div.related li { display: inline; }
+
+div.related li.right { float: right; margin-right: 5px; }
+
+div.sphinxsidebarwrapper { padding: 10px 5px 0px 10px; }
+
+div.sphinxsidebar { float: left; width: 230px; margin-left: -100%; font-siz=
+e: 90%; overflow-wrap: break-word; }
+
+div.sphinxsidebar ul { list-style: none; }
+
+div.sphinxsidebar ul ul, div.sphinxsidebar ul.want-points { margin-left: 20=
+px; list-style: square; }
+
+div.sphinxsidebar ul ul { margin-top: 0px; margin-bottom: 0px; }
+
+div.sphinxsidebar form { margin-top: 10px; }
+
+div.sphinxsidebar input { border: 1px solid rgb(152, 219, 204); font-family=
+: sans-serif; font-size: 1em; }
+
+div.sphinxsidebar #searchbox form.search { overflow: hidden; }
+
+div.sphinxsidebar #searchbox input[type=3D"text"] { float: left; width: 80%=
+; padding: 0.25em; box-sizing: border-box; }
+
+div.sphinxsidebar #searchbox input[type=3D"submit"] { float: left; width: 2=
+0%; border-left-width: medium; border-left-style: none; border-left-color: =
+currentcolor; padding: 0.25em; box-sizing: border-box; }
+
+img { border: 0px; max-width: 100%; }
+
+ul.search { margin-top: 10px; }
+
+ul.search li { padding: 5px 0px; }
+
+ul.search li a { font-weight: bold; }
+
+ul.search li p.context { color: rgb(136, 136, 136); margin: 2px 0px 0px 30p=
+x; text-align: left; }
+
+ul.keywordmatches li.goodmatch a { font-weight: bold; }
+
+table.contentstable { width: 90%; margin-left: auto; margin-right: auto; }
+
+table.contentstable p.biglink { line-height: 150%; }
+
+a.biglink { font-size: 1.3em; }
+
+span.linkdescr { font-style: italic; padding-top: 5px; font-size: 90%; }
+
+table.indextable { width: 100%; }
+
+table.indextable td { text-align: left; vertical-align: top; }
+
+table.indextable ul { margin-top: 0px; margin-bottom: 0px; list-style-type:=
+ none; }
+
+table.indextable > tbody > tr > td > ul { padding-left: 0em; }
+
+table.indextable tr.pcap { height: 10px; }
+
+table.indextable tr.cap { margin-top: 10px; background-color: rgb(242, 242,=
+ 242); }
+
+img.toggler { margin-right: 3px; margin-top: 3px; cursor: pointer; }
+
+div.modindex-jumpbox { border-top: 1px solid rgb(221, 221, 221); border-bot=
+tom: 1px solid rgb(221, 221, 221); margin: 1em 0px; padding: 0.4em; }
+
+div.genindex-jumpbox { border-top: 1px solid rgb(221, 221, 221); border-bot=
+tom: 1px solid rgb(221, 221, 221); margin: 1em 0px; padding: 0.4em; }
+
+table.modindextable td { padding: 2px; border-collapse: collapse; }
+
+div.body { min-width: 360px; max-width: 800px; }
+
+div.body p, div.body dd, div.body li, div.body blockquote { hyphens: auto; =
+}
+
+a.headerlink { visibility: hidden; }
+
+a:visited { color: rgb(85, 26, 139); }
+
+h1:hover > a.headerlink, h2:hover > a.headerlink, h3:hover > a.headerlink, =
+h4:hover > a.headerlink, h5:hover > a.headerlink, h6:hover > a.headerlink, =
+dt:hover > a.headerlink, caption:hover > a.headerlink, p.caption:hover > a.=
+headerlink, div.code-block-caption:hover > a.headerlink { visibility: visib=
+le; }
+
+div.body p.caption { text-align: inherit; }
+
+div.body td { text-align: left; }
+
+.first { margin-top: 0px !important; }
+
+p.rubric { margin-top: 30px; font-weight: bold; }
+
+img.align-left, figure.align-left, .figure.align-left, object.align-left { =
+clear: left; float: left; margin-right: 1em; }
+
+img.align-right, figure.align-right, .figure.align-right, object.align-righ=
+t { clear: right; float: right; margin-left: 1em; }
+
+img.align-center, figure.align-center, .figure.align-center, object.align-c=
+enter { display: block; margin-left: auto; margin-right: auto; }
+
+img.align-default, figure.align-default, .figure.align-default { display: b=
+lock; margin-left: auto; margin-right: auto; }
+
+.align-left { text-align: left; }
+
+.align-center { text-align: center; }
+
+.align-default { text-align: center; }
+
+.align-right { text-align: right; }
+
+div.sidebar, aside.sidebar { margin: 0px 0px 0.5em 1em; border: 1px solid r=
+gb(221, 221, 187); padding: 7px; background-color: rgb(255, 255, 238); widt=
+h: 40%; float: right; clear: right; overflow-x: auto; }
+
+p.sidebar-title { font-weight: bold; }
+
+nav.contents, aside.topic, div.admonition, div.topic, blockquote { clear: l=
+eft; }
+
+nav.contents, aside.topic, div.topic { border: 1px solid rgb(204, 204, 204)=
+; padding: 7px; margin: 10px 0px; }
+
+p.topic-title { font-size: 1.1em; font-weight: bold; margin-top: 10px; }
+
+div.admonition { margin-top: 10px; margin-bottom: 10px; padding: 7px; }
+
+div.admonition dt { font-weight: bold; }
+
+p.admonition-title { margin: 0px 10px 5px 0px; font-weight: bold; }
+
+div.body p.centered { text-align: center; margin-top: 25px; }
+
+div.sidebar > :last-child, aside.sidebar > :last-child, nav.contents > :las=
+t-child, aside.topic > :last-child, div.topic > :last-child, div.admonition=
+ > :last-child { margin-bottom: 0px; }
+
+div.sidebar::after, aside.sidebar::after, nav.contents::after, aside.topic:=
+:after, div.topic::after, div.admonition::after, blockquote::after { displa=
+y: block; content: ""; clear: both; }
+
+table.docutils { margin-top: 10px; margin-bottom: 10px; border: 0px; border=
+-collapse: collapse; }
+
+table.align-center { margin-left: auto; margin-right: auto; }
+
+table.align-default { margin-left: auto; margin-right: auto; }
+
+table caption span.caption-number { font-style: italic; }
+
+table caption span.caption-text { }
+
+table.docutils td, table.docutils th { padding: 1px 8px 1px 5px; border-wid=
+th: 0px 0px 1px; border-style: none none solid; border-color: currentcolor =
+currentcolor rgb(170, 170, 170); }
+
+th { text-align: left; padding-right: 5px; }
+
+table.citation { border-left: 1px solid gray; margin-left: 1px; }
+
+table.citation td { border-bottom-width: medium; border-bottom-style: none;=
+ border-bottom-color: currentcolor; }
+
+th > :first-child, td > :first-child { margin-top: 0px; }
+
+th > :last-child, td > :last-child { margin-bottom: 0px; }
+
+div.figure, figure { margin: 0.5em; padding: 0.5em; }
+
+div.figure p.caption, figcaption { padding: 0.3em; }
+
+div.figure p.caption span.caption-number, figcaption span.caption-number { =
+font-style: italic; }
+
+div.figure p.caption span.caption-text, figcaption span.caption-text { }
+
+table.field-list td, table.field-list th { border: 0px !important; }
+
+.field-list ul { margin: 0px; padding-left: 1em; }
+
+.field-list p { margin: 0px; }
+
+.field-name { hyphens: manual; }
+
+table.hlist { margin: 1em 0px; }
+
+table.hlist td { vertical-align: top; }
+
+.sig { font-family: Consolas, Menlo, "DejaVu Sans Mono", "Bitstream Vera Sa=
+ns Mono", monospace; }
+
+.sig-name, code.descname { background-color: transparent; font-weight: bold=
+; }
+
+.sig-name { font-size: 1.1em; }
+
+code.descname { font-size: 1.2em; }
+
+.sig-prename, code.descclassname { background-color: transparent; }
+
+.optional { font-size: 1.3em; }
+
+.sig-paren { font-size: larger; }
+
+.sig-param.n { font-style: italic; }
+
+.sig-inline.c-texpr, .sig-inline.cpp-texpr { font-family: unset; }
+
+.sig.c .k, .sig.c .kt, .sig.cpp .k, .sig.cpp .kt { color: rgb(0, 51, 179); =
+}
+
+.sig.c .m, .sig.cpp .m { color: rgb(23, 80, 235); }
+
+.sig.c .s, .sig.c .sc, .sig.cpp .s, .sig.cpp .sc { color: rgb(6, 125, 23); =
+}
+
+ol.arabic { list-style: decimal; }
+
+ol.loweralpha { list-style: lower-alpha; }
+
+ol.upperalpha { list-style: upper-alpha; }
+
+ol.lowerroman { list-style: lower-roman; }
+
+ol.upperroman { list-style: upper-roman; }
+
+:not(li) > ol > li:first-child > :first-child, :not(li) > ul > li:first-chi=
+ld > :first-child { margin-top: 0px; }
+
+:not(li) > ol > li:last-child > :last-child, :not(li) > ul > li:last-child =
+> :last-child { margin-bottom: 0px; }
+
+ol.simple ol p, ol.simple ul p, ul.simple ol p, ul.simple ul p { margin-top=
+: 0px; }
+
+ol.simple > li:not(:first-child) > p, ul.simple > li:not(:first-child) > p =
+{ margin-top: 0px; }
+
+ol.simple p, ul.simple p { margin-bottom: 0px; }
+
+aside.footnote > span, div.citation > span { float: left; }
+
+aside.footnote > span:last-of-type, div.citation > span:last-of-type { padd=
+ing-right: 0.5em; }
+
+aside.footnote > p { margin-left: 2em; }
+
+div.citation > p { margin-left: 4em; }
+
+aside.footnote > p:last-of-type, div.citation > p:last-of-type { margin-bot=
+tom: 0em; }
+
+aside.footnote > p:last-of-type::after, div.citation > p:last-of-type::afte=
+r { content: ""; clear: both; }
+
+dl.field-list { display: grid; grid-template-columns: fit-content(30%) auto=
+; }
+
+dl.field-list > dt { font-weight: bold; word-break: break-word; padding-lef=
+t: 0.5em; padding-right: 5px; }
+
+dl.field-list > dd { padding-left: 0.5em; margin-top: 0em; margin-left: 0em=
+; margin-bottom: 0em; }
+
+dl { margin-bottom: 15px; }
+
+dd > :first-child { margin-top: 0px; }
+
+dd ul, dd table { margin-bottom: 10px; }
+
+dd { margin-top: 3px; margin-bottom: 10px; margin-left: 30px; }
+
+.sig dd { margin-top: 0px; margin-bottom: 0px; }
+
+.sig dl { margin-top: 0px; margin-bottom: 0px; }
+
+dl > dd:last-child, dl > dd:last-child > :last-child { margin-bottom: 0px; =
+}
+
+dt:target, span.highlighted { background-color: rgb(251, 229, 78); }
+
+rect.highlighted { fill: rgb(251, 229, 78); }
+
+dl.glossary dt { font-weight: bold; font-size: 1.1em; }
+
+.versionmodified { font-style: italic; }
+
+.system-message { background-color: rgb(255, 221, 170); padding: 5px; borde=
+r: 3px solid red; }
+
+.footnote:target { background-color: rgb(255, 255, 170); }
+
+.line-block { display: block; margin-top: 1em; margin-bottom: 1em; }
+
+.line-block .line-block { margin-top: 0px; margin-bottom: 0px; margin-left:=
+ 1.5em; }
+
+.guilabel, .menuselection { font-family: sans-serif; }
+
+.accelerator { text-decoration: underline; }
+
+.classifier { font-style: oblique; }
+
+.classifier::before { font-style: normal; margin: 0px 0.5em; content: ":"; =
+display: inline-block; }
+
+abbr, acronym { border-bottom: 1px dotted; cursor: help; }
+
+pre { overflow: auto hidden; }
+
+pre, div[class*=3D"highlight-"] { clear: both; }
+
+span.pre { hyphens: none; white-space: nowrap; }
+
+div[class*=3D"highlight-"] { margin: 1em 0px; }
+
+td.linenos pre { border: 0px; background-color: transparent; color: rgb(170=
+, 170, 170); }
+
+table.highlighttable { display: block; }
+
+table.highlighttable tbody { display: block; }
+
+table.highlighttable tr { display: flex; }
+
+table.highlighttable td { margin: 0px; padding: 0px; }
+
+table.highlighttable td.linenos { padding-right: 0.5em; }
+
+table.highlighttable td.code { flex: 1 1 0%; overflow: hidden; }
+
+.highlight .hll { display: block; }
+
+div.highlight pre, table.highlighttable pre { margin: 0px; }
+
+div.code-block-caption + div { margin-top: 0px; }
+
+div.code-block-caption { margin-top: 1em; padding: 2px 5px; font-size: smal=
+l; }
+
+div.code-block-caption code { background-color: transparent; }
+
+table.highlighttable td.linenos, span.linenos, div.highlight span.gp { user=
+-select: none; }
+
+div.code-block-caption span.caption-number { padding: 0.1em 0.3em; font-sty=
+le: italic; }
+
+div.code-block-caption span.caption-text { }
+
+div.literal-block-wrapper { margin: 1em 0px; }
+
+code.xref, a code { background-color: transparent; font-weight: bold; }
+
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { background-color: tr=
+ansparent; }
+
+.viewcode-link { float: right; }
+
+.viewcode-back { float: right; font-family: sans-serif; }
+
+div.viewcode-block:target { margin: -1px -10px; padding: 0px 10px; }
+
+img.math { vertical-align: middle; }
+
+div.body div.math p { text-align: center; }
+
+span.eqno { float: right; }
+
+span.eqno a.headerlink { position: absolute; z-index: 1; }
+
+div.math:hover a.headerlink { visibility: visible; }
+
+@media print {
+  div.document, div.documentwrapper, div.bodywrapper { width: 100%; margin:=
+ 0px !important; }
+  div.sphinxsidebar, div.related, div.footer, #top-link { display: none; }
+}
+------MultipartBoundary--xmciKiJdYXu8nrfoOxIkO1CQ7jFW33LQECJa4hHxBA----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://python-path-specification.readthedocs.io/en/stable/_static/sphinxdoc.css?v=34905f61
+
+@charset "utf-8";
+
+@import url("basic.css");
+
+body { font-family: "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana=
+, sans-serif; font-size: 14px; letter-spacing: -0.01em; line-height: 150%; =
+text-align: center; background-color: rgb(191, 209, 212); color: black; pad=
+ding: 0px; border: 1px solid rgb(170, 170, 170); margin: 0px 80px; min-widt=
+h: 740px; }
+
+div.document { background-color: white; text-align: left; background-image:=
+ url("contents.png"); background-repeat: repeat-x; }
+
+div.documentwrapper { float: left; width: 100%; }
+
+div.bodywrapper { margin: 0px calc(240px) 0px 0px; border-right: 1px solid =
+rgb(204, 204, 204); }
+
+div.body { margin: 0px; padding: 0.5em 20px 20px; }
+
+div.related { font-size: 1em; }
+
+div.related ul { background-image: url("navigation.png"); height: 2em; bord=
+er-top: 1px solid rgb(221, 221, 221); border-bottom: 1px solid rgb(221, 221=
+, 221); }
+
+div.related ul li { margin: 0px; padding: 0px; height: 2em; float: left; }
+
+div.related ul li.right { float: right; margin-right: 5px; }
+
+div.related ul li a { margin: 0px; padding: 0px 5px; line-height: 1.75em; c=
+olor: rgb(238, 152, 22); }
+
+div.related ul li a:hover { color: rgb(60, 168, 231); }
+
+div.sphinxsidebarwrapper { padding: 0px; }
+
+div.sphinxsidebar { padding: 0.5em 15px 15px 0px; width: calc(210px); float=
+: right; font-size: 1em; text-align: left; }
+
+div.sphinxsidebar h3, div.sphinxsidebar h4 { margin: 1em 0px 0.5em; font-si=
+ze: 1em; padding: 0.1em 0px 0.1em 0.5em; color: white; border: 1px solid rg=
+b(134, 152, 155); background-color: rgb(175, 193, 196); }
+
+div.sphinxsidebar h3 a { color: white; }
+
+div.sphinxsidebar ul { margin-top: 7px; padding: 0px; line-height: 130%; }
+
+div.sphinxsidebar ul ul { margin-left: 20px; }
+
+div.footer { background-color: rgb(227, 239, 241); color: rgb(134, 152, 155=
+); padding: 3px 8px 3px 0px; clear: both; font-size: 0.8em; text-align: rig=
+ht; }
+
+div.footer a { color: rgb(134, 152, 155); text-decoration: underline; }
+
+p { margin: 0.8em 0px 0.5em; }
+
+a { color: rgb(202, 121, 0); text-decoration: none; }
+
+a:hover { color: rgb(36, 145, 207); }
+
+a:visited { color: rgb(85, 26, 139); }
+
+div.body a { text-decoration: underline; }
+
+h1 { margin: 0px; padding: 0.7em 0px 0.3em; font-size: 1.5em; color: rgb(17=
+, 85, 124); }
+
+h2 { margin: 1.3em 0px 0.2em; font-size: 1.35em; padding: 0px; }
+
+h3 { margin: 1em 0px -0.3em; font-size: 1.2em; }
+
+div.body h1 a, div.body h2 a, div.body h3 a, div.body h4 a, div.body h5 a, =
+div.body h6 a { color: black !important; }
+
+h1 a.anchor, h2 a.anchor, h3 a.anchor, h4 a.anchor, h5 a.anchor, h6 a.ancho=
+r { display: none; margin: 0px 0px 0px 0.3em; padding: 0px 0.2em; color: rg=
+b(170, 170, 170) !important; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor,=
+ h5:hover a.anchor, h6:hover a.anchor { display: inline; }
+
+h1 a.anchor:hover, h2 a.anchor:hover, h3 a.anchor:hover, h4 a.anchor:hover,=
+ h5 a.anchor:hover, h6 a.anchor:hover { color: rgb(119, 119, 119); backgrou=
+nd-color: rgb(238, 238, 238); }
+
+a.headerlink { font-size: 1em; margin-left: 6px; padding: 0px 4px; color: r=
+gb(198, 15, 15) !important; text-decoration: none !important; }
+
+a.headerlink:hover { background-color: rgb(204, 204, 204); color: white !im=
+portant; }
+
+cite, code, code { font-family: Consolas, "Deja Vu Sans Mono", "Bitstream V=
+era Sans Mono", monospace; font-size: 0.95em; letter-spacing: 0.01em; }
+
+code { background-color: rgb(242, 242, 242); border-bottom: 1px solid rgb(2=
+21, 221, 221); color: rgb(51, 51, 51); }
+
+code.descname, code.descclassname, code.xref { border: 0px; }
+
+hr { border: 1px solid rgb(170, 187, 204); margin: 2em; }
+
+a code { border: 0px; color: rgb(202, 121, 0); }
+
+a code:hover { color: rgb(36, 145, 207); }
+
+pre { font-family: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono=
+", monospace; font-size: 0.95em; letter-spacing: 0.015em; line-height: 120%=
+; padding: 0.5em; border: 1px solid rgb(204, 204, 204); }
+
+pre a { color: inherit; text-decoration: underline; }
+
+td.linenos pre { padding: 0.5em 0px; }
+
+div.quotebar { background-color: rgb(248, 248, 248); max-width: 250px; floa=
+t: right; padding: 2px 7px; border: 1px solid rgb(204, 204, 204); }
+
+nav.contents, aside.topic, div.topic { background-color: rgb(248, 248, 248)=
+; }
+
+table { border-collapse: collapse; margin: 0px -0.5em; }
+
+table td, table th { padding: 0.2em 0.5em; }
+
+div.admonition, div.warning { font-size: 0.9em; margin: 1em 0px; border: 1p=
+x solid rgb(134, 152, 155); background-color: rgb(247, 247, 247); padding: =
+0px; }
+
+div.admonition p, div.warning p { margin: 0.5em 1em; padding: 0px; }
+
+div.admonition pre, div.warning pre { margin: 0.4em 1em; }
+
+div.admonition p.admonition-title, div.warning p.admonition-title { margin:=
+ 0px; padding: 0.1em 0px 0.1em 0.5em; color: white; border-bottom: 1px soli=
+d rgb(134, 152, 155); font-weight: bold; background-color: rgb(175, 193, 19=
+6); }
+
+div.warning { border: 1px solid rgb(148, 0, 0); }
+
+div.warning p.admonition-title { background-color: rgb(207, 0, 0); border-b=
+ottom-color: rgb(148, 0, 0); }
+
+div.admonition ul, div.admonition ol, div.warning ul, div.warning ol { marg=
+in: 0.1em 0.5em 0.5em 3em; padding: 0px; }
+
+div.versioninfo { margin: 1em 0px 0px; border: 1px solid rgb(204, 204, 204)=
+; background-color: rgb(221, 234, 240); padding: 8px; line-height: 1.3em; f=
+ont-size: 0.9em; }
+
+.viewcode-back { font-family: "Lucida Grande", "Lucida Sans Unicode", Genev=
+a, Verdana, sans-serif; }
+
+div.viewcode-block:target { background-color: rgb(244, 222, 191); border-to=
+p: 1px solid rgb(170, 204, 153); border-bottom: 1px solid rgb(170, 204, 153=
+); }
+
+div.code-block-caption { background-color: rgb(221, 221, 221); color: rgb(3=
+4, 34, 34); border: 1px solid rgb(204, 204, 204); }
+------MultipartBoundary--xmciKiJdYXu8nrfoOxIkO1CQ7jFW33LQECJa4hHxBA----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://python-path-specification.readthedocs.io/en/stable/_static/pygments.css?v=03e43079
+
+@charset "utf-8";
+
+pre { line-height: 125%; }
+
+td.linenos .normal { color: inherit; background-color: transparent; padding=
+-left: 5px; padding-right: 5px; }
+
+span.linenos { color: inherit; background-color: transparent; padding-left:=
+ 5px; padding-right: 5px; }
+
+td.linenos .special { color: rgb(0, 0, 0); background-color: rgb(255, 255, =
+192); padding-left: 5px; padding-right: 5px; }
+
+span.linenos.special { color: rgb(0, 0, 0); background-color: rgb(255, 255,=
+ 192); padding-left: 5px; padding-right: 5px; }
+
+.highlight .hll { background-color: rgb(255, 255, 204); }
+
+.highlight { background: rgb(238, 255, 204); }
+
+.highlight .c { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .err { border: 1px solid rgb(255, 0, 0); }
+
+.highlight .k { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .o { color: rgb(102, 102, 102); }
+
+.highlight .ch { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .cm { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .cp { color: rgb(0, 112, 32); }
+
+.highlight .cpf { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .c1 { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .cs { color: rgb(64, 128, 144); background-color: rgb(255, 240, =
+240); }
+
+.highlight .gd { color: rgb(160, 0, 0); }
+
+.highlight .ge { font-style: italic; }
+
+.highlight .ges { font-weight: bold; font-style: italic; }
+
+.highlight .gr { color: rgb(255, 0, 0); }
+
+.highlight .gh { color: rgb(0, 0, 128); font-weight: bold; }
+
+.highlight .gi { color: rgb(0, 160, 0); }
+
+.highlight .go { color: rgb(51, 51, 51); }
+
+.highlight .gp { color: rgb(198, 93, 9); font-weight: bold; }
+
+.highlight .gs { font-weight: bold; }
+
+.highlight .gu { color: rgb(128, 0, 128); font-weight: bold; }
+
+.highlight .gt { color: rgb(0, 68, 221); }
+
+.highlight .kc { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .kd { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .kn { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .kp { color: rgb(0, 112, 32); }
+
+.highlight .kr { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .kt { color: rgb(144, 32, 0); }
+
+.highlight .m { color: rgb(32, 128, 80); }
+
+.highlight .s { color: rgb(64, 112, 160); }
+
+.highlight .na { color: rgb(64, 112, 160); }
+
+.highlight .nb { color: rgb(0, 112, 32); }
+
+.highlight .nc { color: rgb(14, 132, 181); font-weight: bold; }
+
+.highlight .no { color: rgb(96, 173, 213); }
+
+.highlight .nd { color: rgb(85, 85, 85); font-weight: bold; }
+
+.highlight .ni { color: rgb(213, 85, 55); font-weight: bold; }
+
+.highlight .ne { color: rgb(0, 112, 32); }
+
+.highlight .nf { color: rgb(6, 40, 126); }
+
+.highlight .nl { color: rgb(0, 32, 112); font-weight: bold; }
+
+.highlight .nn { color: rgb(14, 132, 181); font-weight: bold; }
+
+.highlight .nt { color: rgb(6, 40, 115); font-weight: bold; }
+
+.highlight .nv { color: rgb(187, 96, 213); }
+
+.highlight .ow { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .w { color: rgb(187, 187, 187); }
+
+.highlight .mb { color: rgb(32, 128, 80); }
+
+.highlight .mf { color: rgb(32, 128, 80); }
+
+.highlight .mh { color: rgb(32, 128, 80); }
+
+.highlight .mi { color: rgb(32, 128, 80); }
+
+.highlight .mo { color: rgb(32, 128, 80); }
+
+.highlight .sa { color: rgb(64, 112, 160); }
+
+.highlight .sb { color: rgb(64, 112, 160); }
+
+.highlight .sc { color: rgb(64, 112, 160); }
+
+.highlight .dl { color: rgb(64, 112, 160); }
+
+.highlight .sd { color: rgb(64, 112, 160); font-style: italic; }
+
+.highlight .s2 { color: rgb(64, 112, 160); }
+
+.highlight .se { color: rgb(64, 112, 160); font-weight: bold; }
+
+.highlight .sh { color: rgb(64, 112, 160); }
+
+.highlight .si { color: rgb(112, 160, 208); font-style: italic; }
+
+.highlight .sx { color: rgb(198, 93, 9); }
+
+.highlight .sr { color: rgb(35, 83, 136); }
+
+.highlight .s1 { color: rgb(64, 112, 160); }
+
+.highlight .ss { color: rgb(81, 121, 24); }
+
+.highlight .bp { color: rgb(0, 112, 32); }
+
+.highlight .fm { color: rgb(6, 40, 126); }
+
+.highlight .vc { color: rgb(187, 96, 213); }
+
+.highlight .vg { color: rgb(187, 96, 213); }
+
+.highlight .vi { color: rgb(187, 96, 213); }
+
+.highlight .vm { color: rgb(187, 96, 213); }
+
+.highlight .il { color: rgb(32, 128, 80); }
+------MultipartBoundary--xmciKiJdYXu8nrfoOxIkO1CQ7jFW33LQECJa4hHxBA----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-6ff60ae8-b149-411c-8e3f-30fb823bacbc@mhtml.blink
+
+@charset "utf-8";
+
+:root, :host { --fa-font-solid: normal 900 1em/1 'Font Awesome 7 Free'; --f=
+a-font-regular: normal 400 1em/1 'Font Awesome 7 Free'; --fa-font-light: no=
+rmal 300 1em/1 'Font Awesome 7 Pro'; --fa-font-thin: normal 100 1em/1 'Font=
+ Awesome 7 Pro'; --fa-font-duotone: normal 900 1em/1 'Font Awesome 7 Duoton=
+e'; --fa-font-duotone-regular: normal 400 1em/1 'Font Awesome 7 Duotone'; -=
+-fa-font-duotone-light: normal 300 1em/1 'Font Awesome 7 Duotone'; --fa-fon=
+t-duotone-thin: normal 100 1em/1 'Font Awesome 7 Duotone'; --fa-font-brands=
+: normal 400 1em/1 'Font Awesome 7 Brands'; --fa-font-sharp-solid: normal 9=
+00 1em/1 'Font Awesome 7 Sharp'; --fa-font-sharp-regular: normal 400 1em/1 =
+'Font Awesome 7 Sharp'; --fa-font-sharp-light: normal 300 1em/1 'Font Aweso=
+me 7 Sharp'; --fa-font-sharp-thin: normal 100 1em/1 'Font Awesome 7 Sharp';=
+ --fa-font-sharp-duotone-solid: normal 900 1em/1 'Font Awesome 7 Sharp Duot=
+one'; --fa-font-sharp-duotone-regular: normal 400 1em/1 'Font Awesome 7 Sha=
+rp Duotone'; --fa-font-sharp-duotone-light: normal 300 1em/1 'Font Awesome =
+7 Sharp Duotone'; --fa-font-sharp-duotone-thin: normal 100 1em/1 'Font Awes=
+ome 7 Sharp Duotone'; --fa-font-slab-regular: normal 400 1em/1 'Font Awesom=
+e 7 Slab'; --fa-font-slab-press-regular: normal 400 1em/1 'Font Awesome 7 S=
+lab Press'; --fa-font-whiteboard-semibold: normal 600 1em/1 'Font Awesome 7=
+ Whiteboard'; --fa-font-thumbprint-light: normal 300 1em/1 'Font Awesome 7 =
+Thumbprint'; --fa-font-notdog-solid: normal 900 1em/1 'Font Awesome 7 Notdo=
+g'; --fa-font-notdog-duo-solid: normal 900 1em/1 'Font Awesome 7 Notdog Duo=
+'; --fa-font-etch-solid: normal 900 1em/1 'Font Awesome 7 Etch'; --fa-font-=
+graphite-thin: normal 100 1em/1 'Font Awesome 7 Graphite'; --fa-font-jelly-=
+regular: normal 400 1em/1 'Font Awesome 7 Jelly'; --fa-font-jelly-fill-regu=
+lar: normal 400 1em/1 'Font Awesome 7 Jelly Fill'; --fa-font-jelly-duo-regu=
+lar: normal 400 1em/1 'Font Awesome 7 Jelly Duo'; --fa-font-chisel-regular:=
+ normal 400 1em/1 'Font Awesome 7 Chisel'; --fa-font-utility-semibold: norm=
+al 600 1em/1 'Font Awesome 7 Utility'; --fa-font-utility-duo-semibold: norm=
+al 600 1em/1 'Font Awesome 7 Utility Duo'; --fa-font-utility-fill-semibold:=
+ normal 600 1em/1 'Font Awesome 7 Utility Fill'; }
+
+.svg-inline--fa { box-sizing: content-box; display: var(--fa-display, inlin=
+e-block); height: 1em; overflow: visible; vertical-align: -0.125em; width: =
+var(--fa-width, 1.25em); }
+
+.svg-inline--fa.fa-2xs { vertical-align: 0.1em; }
+
+.svg-inline--fa.fa-xs { vertical-align: 0em; }
+
+.svg-inline--fa.fa-sm { vertical-align: -0.0714286em; }
+
+.svg-inline--fa.fa-lg { vertical-align: -0.2em; }
+
+.svg-inline--fa.fa-xl { vertical-align: -0.25em; }
+
+.svg-inline--fa.fa-2xl { vertical-align: -0.3125em; }
+
+.svg-inline--fa.fa-pull-left, .svg-inline--fa .fa-pull-start { float: inlin=
+e-start; margin-inline-end: var(--fa-pull-margin, 0.3em); }
+
+.svg-inline--fa.fa-pull-right, .svg-inline--fa .fa-pull-end { float: inline=
+-end; margin-inline-start: var(--fa-pull-margin, 0.3em); }
+
+.svg-inline--fa.fa-li { width: var(--fa-li-width, 2em); inset-inline-start:=
+ calc(-1 * var(--fa-li-width, 2em)); inset-block-start: 0.25em; }
+
+.fa-layers-counter, .fa-layers-text { display: inline-block; position: abso=
+lute; text-align: center; }
+
+.fa-layers { display: inline-block; height: 1em; position: relative; text-a=
+lign: center; vertical-align: -0.125em; width: var(--fa-width, 1.25em); }
+
+.fa-layers .svg-inline--fa { inset: 0px; margin: auto; position: absolute; =
+transform-origin: center center; }
+
+.fa-layers-text { left: 50%; top: 50%; transform: translate(-50%, -50%); tr=
+ansform-origin: center center; }
+
+.fa-layers-counter { background-color: var(--fa-counter-background-color, #=
+ff253a); border-radius: var(--fa-counter-border-radius, 1em); box-sizing: b=
+order-box; color: var(--fa-inverse, #fff); line-height: var(--fa-counter-li=
+ne-height, 1); max-width: var(--fa-counter-max-width, 5em); min-width: var(=
+--fa-counter-min-width, 1.5em); overflow: hidden; padding: var(--fa-counter=
+-padding, 0.25em 0.5em); right: var(--fa-right, 0); text-overflow: ellipsis=
+; top: var(--fa-top, 0); transform: scale(var(--fa-counter-scale, 0.25)); t=
+ransform-origin: right top; }
+
+.fa-layers-bottom-right { bottom: var(--fa-bottom, 0); right: var(--fa-righ=
+t, 0); top: auto; transform: scale(var(--fa-layers-scale, 0.25)); transform=
+-origin: right bottom; }
+
+.fa-layers-bottom-left { bottom: var(--fa-bottom, 0); left: var(--fa-left, =
+0); right: auto; top: auto; transform: scale(var(--fa-layers-scale, 0.25));=
+ transform-origin: left bottom; }
+
+.fa-layers-top-right { top: var(--fa-top, 0); right: var(--fa-right, 0); tr=
+ansform: scale(var(--fa-layers-scale, 0.25)); transform-origin: right top; =
+}
+
+.fa-layers-top-left { left: var(--fa-left, 0); right: auto; top: var(--fa-t=
+op, 0); transform: scale(var(--fa-layers-scale, 0.25)); transform-origin: l=
+eft top; }
+
+.fa-1x { font-size: 1em; }
+
+.fa-2x { font-size: 2em; }
+
+.fa-3x { font-size: 3em; }
+
+.fa-4x { font-size: 4em; }
+
+.fa-5x { font-size: 5em; }
+
+.fa-6x { font-size: 6em; }
+
+.fa-7x { font-size: 7em; }
+
+.fa-8x { font-size: 8em; }
+
+.fa-9x { font-size: 9em; }
+
+.fa-10x { font-size: 10em; }
+
+.fa-2xs { font-size: calc(0.625em); line-height: calc(0.1em); vertical-alig=
+n: calc(0.225em); }
+
+.fa-xs { font-size: calc(0.75em); line-height: calc(0.0833333em); vertical-=
+align: calc(0.125em); }
+
+.fa-sm { font-size: calc(0.875em); line-height: calc(0.0714286em); vertical=
+-align: calc(0.0535714em); }
+
+.fa-lg { font-size: calc(1.25em); line-height: calc(0.05em); vertical-align=
+: calc(-0.075em); }
+
+.fa-xl { font-size: calc(1.5em); line-height: calc(0.0416667em); vertical-a=
+lign: calc(-0.125em); }
+
+.fa-2xl { font-size: calc(2em); line-height: calc(0.03125em); vertical-alig=
+n: calc(-0.1875em); }
+
+.fa-width-auto { --fa-width: auto; }
+
+.fa-fw, .fa-width-fixed { --fa-width: 1.25em; }
+
+.fa-ul { list-style-type: none; margin-inline-start: var(--fa-li-margin, 2.=
+5em); padding-inline-start: 0px; }
+
+.fa-ul > li { position: relative; }
+
+.fa-li { inset-inline-start: calc(-1 * var(--fa-li-width, 2em)); position: =
+absolute; text-align: center; width: var(--fa-li-width, 2em); line-height: =
+inherit; }
+
+.fa-border { border-color: var(--fa-border-color, #eee); border-radius: var=
+(--fa-border-radius, 0.1em); border-style: var(--fa-border-style, solid); b=
+order-width: var(--fa-border-width, 0.0625em); box-sizing: var(--fa-border-=
+box-sizing, content-box); padding: var(--fa-border-padding, 0.1875em 0.25em=
+); }
+
+.fa-pull-left, .fa-pull-start { float: inline-start; margin-inline-end: var=
+(--fa-pull-margin, 0.3em); }
+
+.fa-pull-right, .fa-pull-end { float: inline-end; margin-inline-start: var(=
+--fa-pull-margin, 0.3em); }
+
+.fa-beat { animation-name: fa-beat; animation-delay: var(--fa-animation-del=
+ay, 0s); animation-direction: var(--fa-animation-direction, normal); animat=
+ion-duration: var(--fa-animation-duration, 1s); animation-iteration-count: =
+var(--fa-animation-iteration-count, infinite); animation-timing-function: v=
+ar(--fa-animation-timing, ease-in-out); }
+
+.fa-bounce { animation-name: fa-bounce; animation-delay: var(--fa-animation=
+-delay, 0s); animation-direction: var(--fa-animation-direction, normal); an=
+imation-duration: var(--fa-animation-duration, 1s); animation-iteration-cou=
+nt: var(--fa-animation-iteration-count, infinite); animation-timing-functio=
+n: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1)); }
+
+.fa-fade { animation-name: fa-fade; animation-delay: var(--fa-animation-del=
+ay, 0s); animation-direction: var(--fa-animation-direction, normal); animat=
+ion-duration: var(--fa-animation-duration, 1s); animation-iteration-count: =
+var(--fa-animation-iteration-count, infinite); animation-timing-function: v=
+ar(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1)); }
+
+.fa-beat-fade { animation-name: fa-beat-fade; animation-delay: var(--fa-ani=
+mation-delay, 0s); animation-direction: var(--fa-animation-direction, norma=
+l); animation-duration: var(--fa-animation-duration, 1s); animation-iterati=
+on-count: var(--fa-animation-iteration-count, infinite); animation-timing-f=
+unction: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1)); }
+
+.fa-flip { animation-name: fa-flip; animation-delay: var(--fa-animation-del=
+ay, 0s); animation-direction: var(--fa-animation-direction, normal); animat=
+ion-duration: var(--fa-animation-duration, 1s); animation-iteration-count: =
+var(--fa-animation-iteration-count, infinite); animation-timing-function: v=
+ar(--fa-animation-timing, ease-in-out); }
+
+.fa-shake { animation-name: fa-shake; animation-delay: var(--fa-animation-d=
+elay, 0s); animation-direction: var(--fa-animation-direction, normal); anim=
+ation-duration: var(--fa-animation-duration, 1s); animation-iteration-count=
+: var(--fa-animation-iteration-count, infinite); animation-timing-function:=
+ var(--fa-animation-timing, linear); }
+
+.fa-spin { animation-name: fa-spin; animation-delay: var(--fa-animation-del=
+ay, 0s); animation-direction: var(--fa-animation-direction, normal); animat=
+ion-duration: var(--fa-animation-duration, 2s); animation-iteration-count: =
+var(--fa-animation-iteration-count, infinite); animation-timing-function: v=
+ar(--fa-animation-timing, linear); }
+
+.fa-spin-reverse { --fa-animation-direction: reverse; }
+
+.fa-pulse, .fa-spin-pulse { animation-name: fa-spin; animation-direction: v=
+ar(--fa-animation-direction, normal); animation-duration: var(--fa-animatio=
+n-duration, 1s); animation-iteration-count: var(--fa-animation-iteration-co=
+unt, infinite); animation-timing-function: var(--fa-animation-timing, steps=
+(8)); }
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat, .fa-bounce, .fa-fade, .fa-beat-fade, .fa-flip, .fa-pulse, .fa-s=
+hake, .fa-spin, .fa-spin-pulse { animation: auto ease 0s 1 normal none runn=
+ing none !important; transition: none !important; }
+}
+
+@keyframes fa-beat {=20
+  0%, 90% { transform: scale(1); }
+  45% { transform: scale(var(--fa-beat-scale, 1.25)); }
+}
+
+@keyframes fa-bounce {=20
+  0% { transform: scale(1, 1) translateY(0px); }
+  10% { transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-boun=
+ce-start-scale-y, 0.9)) translateY(0); }
+  30% { transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounc=
+e-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em)); }
+  50% { transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-boun=
+ce-land-scale-y, 0.95)) translateY(0); }
+  57% { transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em=
+)); }
+  64% { transform: scale(1, 1) translateY(0px); }
+  100% { transform: scale(1, 1) translateY(0px); }
+}
+
+@keyframes fa-fade {=20
+  50% { opacity: var(--fa-fade-opacity, 0.4); }
+}
+
+@keyframes fa-beat-fade {=20
+  0%, 100% { opacity: var(--fa-beat-fade-opacity, 0.4); transform: scale(1)=
+; }
+  50% { opacity: 1; transform: scale(var(--fa-beat-fade-scale, 1.125)); }
+}
+
+@keyframes fa-flip {=20
+  50% { transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(-=
+-fa-flip-z, 0), var(--fa-flip-angle, -180deg)); }
+}
+
+@keyframes fa-shake {=20
+  0% { transform: rotate(-15deg); }
+  4% { transform: rotate(15deg); }
+  8%, 24% { transform: rotate(-18deg); }
+  12%, 28% { transform: rotate(18deg); }
+  16% { transform: rotate(-22deg); }
+  20% { transform: rotate(22deg); }
+  32% { transform: rotate(-12deg); }
+  36% { transform: rotate(12deg); }
+  40%, 100% { transform: rotate(0deg); }
+}
+
+@keyframes fa-spin {=20
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.fa-rotate-90 { transform: rotate(90deg); }
+
+.fa-rotate-180 { transform: rotate(180deg); }
+
+.fa-rotate-270 { transform: rotate(270deg); }
+
+.fa-flip-horizontal { transform: scale(-1, 1); }
+
+.fa-flip-vertical { transform: scale(1, -1); }
+
+.fa-flip-both, .fa-flip-horizontal.fa-flip-vertical { transform: scale(-1, =
+-1); }
+
+.fa-rotate-by { transform: rotate(var(--fa-rotate-angle, 0)); }
+
+.svg-inline--fa .fa-primary { fill: var(--fa-primary-color, currentColor); =
+opacity: var(--fa-primary-opacity, 1); }
+
+.svg-inline--fa .fa-secondary { fill: var(--fa-secondary-color, currentColo=
+r); opacity: var(--fa-secondary-opacity, 0.4); }
+
+.svg-inline--fa.fa-swap-opacity .fa-primary { opacity: var(--fa-secondary-o=
+pacity, 0.4); }
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary { opacity: var(--fa-primary-o=
+pacity, 1); }
+
+.svg-inline--fa mask .fa-primary, .svg-inline--fa mask .fa-secondary { fill=
+: black; }
+
+.svg-inline--fa.fa-inverse { fill: var(--fa-inverse, #fff); }
+
+.fa-stack { display: inline-block; height: 2em; line-height: 2em; position:=
+ relative; vertical-align: middle; width: 2.5em; }
+
+.fa-inverse { color: var(--fa-inverse, #fff); }
+
+.svg-inline--fa.fa-stack-1x { --fa-width: 1.25em; height: 1em; width: var(-=
+-fa-width); }
+
+.svg-inline--fa.fa-stack-2x { --fa-width: 2.5em; height: 2em; width: var(--=
+fa-width); }
+
+.fa-stack-1x, .fa-stack-2x { inset: 0px; margin: auto; position: absolute; =
+z-index: var(--fa-stack-z-index, auto); }
+------MultipartBoundary--xmciKiJdYXu8nrfoOxIkO1CQ7jFW33LQECJa4hHxBA------
