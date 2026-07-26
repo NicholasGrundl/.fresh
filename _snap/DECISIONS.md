@@ -40,6 +40,20 @@ and there was no install mechanism at all — the 890-line README said "copy thi
   thing worth keeping from the v1 `.claude/` generation, but it's still in development — it
   lands in `agents/hooks/`, explicitly *not* in the canonical `_snap` template.
 - **Nothing is deleted outright.** Removed duplicates go to `_archive/` for review.
+- **No `misc/`.** Proposed as a pressure valve, then refused — correctly. The evidence was
+  already in the tree: the *previous* reorg left `REORG_PLAN.md`, a `macos/` folder holding one
+  `.DS_Store`, and a stray `.gitignore_global` at root for six months. Instead, every existing
+  path is assigned a destination up front in `features/[ready]destination-map.md`.
+- **`AGENTS.md` is canonical; `CLAUDE.md`/`GEMINI.md` are symlinks to it** — they're generally
+  the same file, so maintaining three is waste. Needs a *mechanism* that creates them wherever
+  an `AGENTS.md` exists, degrading to copy on Windows.
+- **Bootstrap by agent, not by script (`snap-init`).** The lightest-touch path for a
+  non-technical user is: copy `_snap` in, install a CLI agent via curl, launch it, and let *it*
+  verify and finish the setup — rather than trying to script every case. A new `_snap` skill
+  (the init assistant) does the verification, symlink wiring, template purge, spine seeding, and
+  context selection. Noted chicken-and-egg: the skill lives inside `_snap`, so a small external
+  entrypoint has to do the copy + agent install first. `curl | bash` must not be the only path —
+  it needs the readable `SETUP.md` twin, same rule as the OS installers.
 
 **Findings that drove this:**
 
