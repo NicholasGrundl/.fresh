@@ -21,10 +21,22 @@ Survey the repo, agree the target structure, stand up this workspace. **No files
 - [x] Agreed target structure + the OS model (see `DECISIONS.md` 2026-07-25).
 - [x] Reset this spine from metrochat → .fresh; wrote the Phase 0–4 roadmap.
 
+- [x] Refused `misc/`; wrote `features/[ready]destination-map.md` assigning every existing path
+      a destination. `bootstrap/`, `core/`, `library/`, `prompts/`, `macos/` all dissolve.
+- [x] Added Phase 2.5 (`snap-init` bootstrap-by-agent) and the `AGENTS.md` symlink mechanism.
+
 ## Next
 
-Phase 0 — **awaiting user go-ahead on the checkpoint commit.** 119 files are staged and
-never committed; no restore point exists, so no `mv` should happen before that lands.
+Phase 0 — **user is landing the checkpoint commit by hand.** No `mv` until it lands.
+
+Then **two blockers** gate the first moves (both in ROADMAP open questions):
+
+1. **Cross-OS identical payloads** — ~14 files are one copy today; pure OS-major makes them
+   three. Blocks the `machine/` moves (T1).
+2. **`templates/` as a fourth category** — `library/templates/*` is project scaffolding, not
+   machine/agents/context. Blocks T4.
+
+`agents/`, `context/`, and `_archive/` moves (T2/T3/T5) are unblocked and can run first.
 
 ## Notes / gotchas
 
